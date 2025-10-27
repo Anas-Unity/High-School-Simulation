@@ -10,7 +10,7 @@ public class NavigationManager : MonoBehaviour
     [Header("Navigation Settings")]
     public GameObject player;
     public GameObject navMeshPathDrawer;
-    private LineRenderer lineRenderer;
+    [SerializeField] private LineRenderer lineRenderer;
     private NavMeshPath path;
 
     [Header("UI References")]
@@ -22,6 +22,7 @@ public class NavigationManager : MonoBehaviour
 
     private bool navigationActive = false;
     private int currentDestinationIndex = -1;
+    private Transform currentDestination;
 
     private void Awake()
     {
@@ -61,22 +62,31 @@ public class NavigationManager : MonoBehaviour
     }
 
     // 🔹 Called by button or NPC to toggle navigation line
-    public void ToggleNavigation()
+     public void ToggleNavigation()
     {
-        navigationActive = !navigationActive;
-        Debug.Log("Navigation Button Clicked!");
-
-
-        if (lineRenderer != null)
-            lineRenderer.enabled = navigationActive;
-
-        if (!navigationActive)
+        if (lineRenderer == null)
         {
-            lineRenderer.positionCount = 0; // clear line when turned off
+            Debug.LogWarning("⚠️ LineRenderer not assigned to NavigationManager.");
+            return;
+        }
+
+        navigationActive = !navigationActive;
+        lineRenderer.enabled = navigationActive;
+
+        if (navigationActive)
+        {
+            Debug.Log("✅ Navigation enabled.");
+            if (currentDestination != null)
+                DrawPath(currentDestination.position);
+        }
+        else
+        {
+            Debug.Log("❌ Navigation disabled.");
         }
 
         UpdateButtonVisual();
     }
+
 
     // 🔹 Used by NPC to assign a target
     public void SetDestination(int index)
@@ -118,5 +128,13 @@ public class NavigationManager : MonoBehaviour
         Color c = navigationButton.image.color;
         c.a = navigationActive ? 1f : 0.4f; // full alpha = active, faded = inactive
         navigationButton.image.color = c;
+    }
+    public void EnableNavigation(bool enable)
+    {
+        if (lineRenderer == null) return;
+
+        navigationActive = enable;
+        lineRenderer.enabled = enable;
+        UpdateButtonVisual();
     }
 }

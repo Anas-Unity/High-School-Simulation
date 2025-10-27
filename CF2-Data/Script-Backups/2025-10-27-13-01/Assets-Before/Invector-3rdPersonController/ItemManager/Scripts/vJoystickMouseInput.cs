@@ -17,14 +17,14 @@ public class vJoystickMouseInput : BaseInput
         {
             get
             {
-                return ControlFreak2.CF2Input.GetAxis(horizontal);
+                return Input.GetAxis(horizontal);
             }
         }
         public float verticalAxis
         {
             get
             {
-                return ControlFreak2.CF2Input.GetAxis(vertical);
+                return Input.GetAxis(vertical);
             }
         }
     }
@@ -68,9 +68,9 @@ public class vJoystickMouseInput : BaseInput
         {
             if (vInput.instance.inputDevice == InputDevice.Joystick)
             {
-                if (cursor && (!cursor.gameObject.activeSelf || ControlFreak2.CFCursor.visible))
+                if (cursor && (!cursor.gameObject.activeSelf || Cursor.visible))
                 {
-                    ControlFreak2.CFCursor.visible = false;
+                    Cursor.visible = false;
                     CursorPosition = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
                     cursor.gameObject.SetActive(true);
                     EventSystem.current.SetSelectedGameObject(null);
@@ -84,7 +84,7 @@ public class vJoystickMouseInput : BaseInput
             {
                 if (cursor && cursor.gameObject.activeSelf)
                 {
-                    ControlFreak2.CFCursor.visible = true;
+                    Cursor.visible = true;
                     cursor.gameObject.SetActive(false);
                 }
                 CursorPosition = base.mousePosition;
@@ -106,7 +106,7 @@ public class vJoystickMouseInput : BaseInput
         {
             case InputDevice.Joystick:
                 if (button == 0)
-                    return ControlFreak2.CF2Input.GetButton(submitButton);
+                    return Input.GetButton(submitButton);
                 else return base.GetMouseButton(button);
 
             default:
@@ -119,7 +119,7 @@ public class vJoystickMouseInput : BaseInput
         {
             case InputDevice.Joystick:
                 if (button == 0)
-                    return ControlFreak2.CF2Input.GetButtonUp(submitButton);
+                    return Input.GetButtonUp(submitButton);
                 else return base.GetMouseButtonUp(button);
 
             default:
@@ -132,7 +132,7 @@ public class vJoystickMouseInput : BaseInput
         {
             case InputDevice.Joystick:
                 if (button == 0)
-                    return ControlFreak2.CF2Input.GetButtonDown(submitButton);
+                    return Input.GetButtonDown(submitButton);
                 else return base.GetMouseButtonDown(button);
 
             default:

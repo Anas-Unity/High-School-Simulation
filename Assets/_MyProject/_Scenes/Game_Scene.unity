@@ -2891,7 +2891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &102199490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3880,7 +3880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &138110723
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3971,7 +3971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.85660374, g: 0.85660374, b: 0.85660374, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4139,6 +4139,263 @@ MonoBehaviour:
   OnStep:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &153140824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 153140825}
+  - component: {fileID: 153140828}
+  - component: {fileID: 153140827}
+  - component: {fileID: 153140826}
+  m_Layer: 0
+  m_Name: Joystick-Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &153140825
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153140824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1426729443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &153140826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153140824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b157099fa5ec75144808407db47c6a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToSource: 1
+  sourceControl: {fileID: 1426729444}
+  spriteNeutral:
+    enabled: 1
+    sprite: {fileID: 21300000, guid: 51ce1a70ac4238c48aaddd05f6604e75, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 0.33}
+    scale: 1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteMode: 0
+  spriteNeutralPressed:
+    enabled: 1
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUp:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUpRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDownRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDown:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDownLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUpLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  animateTransl: 0
+  moveScale: {x: 0, y: 0}
+  translationSmoothingTime: 0.1
+  rotationMode: 0
+  simpleRotationRange: 45
+  rotationSmoothingTime: 0.01
+--- !u!114 &153140827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153140824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 51ce1a70ac4238c48aaddd05f6604e75, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &153140828
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153140824}
+  m_CullTransparentMesh: 1
 --- !u!1 &157843645
 GameObject:
   m_ObjectHideFlags: 0
@@ -15539,6 +15796,109 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405791875}
   m_CullTransparentMesh: 0
+--- !u!1001 &407669681
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 896093049}
+    m_Modifications:
+    - target: {fileID: 111668, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_Name
+      value: CF2-Gamepad-Notifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d57f52e4b3d2244880f650390d1fd00, type: 3}
+--- !u!224 &407669682 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 22452678, guid: 1d57f52e4b3d2244880f650390d1fd00,
+    type: 3}
+  m_PrefabInstance: {fileID: 407669681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &407993804
 GameObject:
   m_ObjectHideFlags: 0
@@ -17561,6 +17921,2777 @@ Transform:
   - {fileID: 1409696547}
   m_Father: {fileID: 1516080898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &480678742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 480678743}
+  - component: {fileID: 480678744}
+  m_Layer: 0
+  m_Name: CF2-Rig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &480678743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480678742}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -740.2694, y: -556.76227, z: -560.9031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 762686721}
+  m_Father: {fileID: 1296438991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &480678744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480678742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7d3c0703122fd4b813bd6bb7cc734c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoActivate: 1
+  overrideActiveRig: 1
+  hideWhenDisactivated: 1
+  disableWhenDisactivated: 0
+  hideWhenTouchScreenIsUnused: 1
+  hideWhenTouchScreenIsUnusedDelay: 10
+  hideWhenGamepadIsActivated: 1
+  hideWhenGamepadIsActivatedDelay: 5
+  fingerRadiusInCm: 0.25
+  swipeOverFromNothing: 0
+  controlBaseAlphaAnimDuration: 0.5
+  animatorMaxAnimDuration: 0.2
+  ninetyDegTurnMouseDelta: 500
+  ninetyDegTurnTouchSwipeInCm: 4
+  ninetyDegTurnAnalogDuration: 0.75
+  virtualScreenDiameterInches: 4
+  scrollStepsPerNinetyDegTurn: 10
+  joysticks:
+    list: []
+  axes:
+    list:
+    - name: Horizontal
+      axisType: 1
+      deltaMode: 1
+      snap: 1
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 100
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 97
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.33333334
+      digitalToAnalogDecelTime: 0.06666667
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Vertical
+      axisType: 1
+      deltaMode: 1
+      snap: 1
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 119
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 115
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.33333334
+      digitalToAnalogDecelTime: 0.06666667
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Mouse X
+      axisType: 4
+      deltaMode: 1
+      snap: 0
+      scale: 0.1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Mouse Y
+      axisType: 4
+      deltaMode: 1
+      snap: 0
+      scale: 0.1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Mouse ScrollWheel
+      axisType: 3
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Mouse ScrollWheel Secondary
+      axisType: 3
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.25
+      digitalToAnalogDecelTime: 0.25
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Fire1
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 304
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.25
+      digitalToAnalogDecelTime: 0.25
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Fire2
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 306
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.25
+      digitalToAnalogDecelTime: 0.25
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Jump
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 32
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.25
+      digitalToAnalogDecelTime: 0.25
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: LeftAnalogHorizontal
+      axisType: 1
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.2
+      digitalToAnalogDecelTime: 0.2
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: LeftAnalogVertical
+      axisType: 1
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.2
+      digitalToAnalogDecelTime: 0.2
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: A
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 101
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: B
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 113
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: X
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 32
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Y
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 99
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: LB
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 324
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: RB
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Back
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Start
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 13
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: LeftStickClick
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: RightStickClick
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: RightAnalogHorizontal
+      axisType: 1
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.2
+      digitalToAnalogDecelTime: 0.2
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: RightAnalogVertical
+      axisType: 1
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.2
+      digitalToAnalogDecelTime: 0.2
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: D-Pad Horizontal
+      axisType: 1
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.2
+      digitalToAnalogDecelTime: 0.2
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: D-Pad Vertical
+      axisType: 1
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.2
+      digitalToAnalogDecelTime: 0.2
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Triggers
+      axisType: 1
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.2
+      digitalToAnalogDecelTime: 0.2
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: LT
+      axisType: 1
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.2
+      digitalToAnalogDecelTime: 0.2
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: RT
+      axisType: 1
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.2
+      digitalToAnalogDecelTime: 0.2
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: EquipLeftMobile
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: EquipRightMobile
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Escape
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 27
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: HorizontalArrow
+      axisType: 1
+      deltaMode: 1
+      snap: 1
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 275
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 276
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.33333334
+      digitalToAnalogDecelTime: 0.06666667
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: VerticalArrow
+      axisType: 1
+      deltaMode: 1
+      snap: 1
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 273
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 274
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.33333334
+      digitalToAnalogDecelTime: 0.06666667
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Enable Debug Button 1
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 306
+      affectedKeyNegative: 0
+      keyboardPositive: 306
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Enable Debug Button 2
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 0
+      affectedKeyNegative: 0
+      keyboardPositive: 0
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Debug Reset
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 308
+      affectedKeyNegative: 0
+      keyboardPositive: 308
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Debug Next
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 281
+      affectedKeyNegative: 0
+      keyboardPositive: 281
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Debug Previous
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 280
+      affectedKeyNegative: 0
+      keyboardPositive: 280
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Debug Validate
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 13
+      affectedKeyNegative: 0
+      keyboardPositive: 13
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Debug Persistent
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 303
+      affectedKeyNegative: 0
+      keyboardPositive: 303
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Debug Multiplier
+      axisType: 2
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 304
+      affectedKeyNegative: 0
+      keyboardPositive: 304
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 0
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0
+      digitalToAnalogDecelTime: 0
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Debug Horizontal
+      axisType: 1
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 275
+      affectedKeyNegative: 276
+      keyboardPositive: 275
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 276
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.001
+      digitalToAnalogDecelTime: 0.001
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+    - name: Debug Vertical
+      axisType: 1
+      deltaMode: 1
+      snap: 0
+      scale: 1
+      affectSourceKeys: 1
+      affectedKeyPositive: 273
+      affectedKeyNegative: 274
+      keyboardPositive: 273
+      keyboardPositiveAlt0: 0
+      keyboardPositiveAlt1: 0
+      keyboardPositiveAlt2: 0
+      keyboardNegative: 274
+      keyboardNegativeAlt0: 0
+      keyboardNegativeAlt1: 0
+      keyboardNegativeAlt2: 0
+      analogToDigitalThresh: 0.125
+      rawSmoothingTime: 0
+      smoothingTime: 0
+      digitalToAnalogAccelTime: 0.001
+      digitalToAnalogDecelTime: 0.001
+      digitalToScrollAutoRepeat: 1
+      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollDelay: 1
+      scrollToAnalogSmoothingTime: 0.05
+      scrollToAnalogStepDuration: 0.1
+      scrollToDeltaSmoothingTime: 0.1
+  keyboardBlockedCodes: 
+  dpadConfig:
+    analogDeadZone: 0.3
+    analogEndZone: 1
+    analogRangeStartValue: 0
+    digitalEnterThresh: 0.6
+    digitalLeaveThresh: 0.3
+    digitalToAnalogPressSpeed: 0.5
+    digitalToAnalogReleaseSpeed: 0.5
+    useRamp: 0
+    ramp:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    clampMode: 1
+    perAxisDeadzones: 0
+    stickMode: 2
+    originalDirResetMode: 0
+    angularMagnet: 0
+    digitalDetectionMode: 1
+    blockX: 0
+    blockY: 0
+  leftStickConfig:
+    analogDeadZone: 0.3
+    analogEndZone: 0.7
+    analogRangeStartValue: 0
+    digitalEnterThresh: 0.6
+    digitalLeaveThresh: 0.3
+    digitalToAnalogPressSpeed: 0.5
+    digitalToAnalogReleaseSpeed: 0.5
+    useRamp: 0
+    ramp:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    clampMode: 1
+    perAxisDeadzones: 0
+    stickMode: 0
+    originalDirResetMode: 0
+    angularMagnet: 0.5
+    digitalDetectionMode: 1
+    blockX: 0
+    blockY: 0
+  rightStickConfig:
+    analogDeadZone: 0.3
+    analogEndZone: 0.7
+    analogRangeStartValue: 0
+    digitalEnterThresh: 0.6
+    digitalLeaveThresh: 0.3
+    digitalToAnalogPressSpeed: 0.5
+    digitalToAnalogReleaseSpeed: 0.5
+    useRamp: 0
+    ramp:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    clampMode: 1
+    perAxisDeadzones: 0
+    stickMode: 0
+    originalDirResetMode: 0
+    angularMagnet: 0.5
+    digitalDetectionMode: 1
+    blockX: 0
+    blockY: 0
+  leftTriggerAnalogConfig:
+    analogDeadZone: 0.2
+    analogEndZone: 1
+    analogRangeStartValue: 0
+    digitalEnterThresh: 0.5
+    digitalLeaveThresh: 0.2
+    digitalToAnalogPressSpeed: 0.5
+    digitalToAnalogReleaseSpeed: 0.5
+    useRamp: 0
+    ramp:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  rightTriggerAnalogConfig:
+    analogDeadZone: 0.2
+    analogEndZone: 1
+    analogRangeStartValue: 0
+    digitalEnterThresh: 0.5
+    digitalLeaveThresh: 0.2
+    digitalToAnalogPressSpeed: 0.5
+    digitalToAnalogReleaseSpeed: 0.5
+    useRamp: 0
+    ramp:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  gamepads:
+  - enabled: 0
+    digiFaceDownBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceRightBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceLeftBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceUpBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiStartBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiSelectBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL1Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR1Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL2Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR2Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL3Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR3Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    analogL2Binding:
+      enabled: 0
+      targetList: []
+    analogR2Binding:
+      enabled: 0
+      targetList: []
+    leftStickStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+    rightStickStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+    dpadStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+  - enabled: 0
+    digiFaceDownBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceRightBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceLeftBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceUpBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiStartBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiSelectBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL1Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR1Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL2Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR2Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL3Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR3Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    analogL2Binding:
+      enabled: 0
+      targetList: []
+    analogR2Binding:
+      enabled: 0
+      targetList: []
+    leftStickStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+    rightStickStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+    dpadStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+  - enabled: 0
+    digiFaceDownBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceRightBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceLeftBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceUpBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiStartBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiSelectBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL1Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR1Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL2Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR2Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL3Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR3Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    analogL2Binding:
+      enabled: 0
+      targetList: []
+    analogR2Binding:
+      enabled: 0
+      targetList: []
+    leftStickStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+    rightStickStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+    dpadStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+  - enabled: 0
+    digiFaceDownBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceRightBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceLeftBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiFaceUpBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiStartBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiSelectBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL1Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR1Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL2Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR2Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL3Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR3Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    analogL2Binding:
+      enabled: 0
+      targetList: []
+    analogR2Binding:
+      enabled: 0
+      targetList: []
+    leftStickStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+    rightStickStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+    dpadStateBinding:
+      enabled: 0
+      horzAxisBinding:
+        enabled: 0
+        targetList: []
+      vertAxisBinding:
+        enabled: 0
+        targetList: []
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+  anyGamepad:
+    enabled: 1
+    digiFaceDownBinding:
+      enabled: 1
+      axisList:
+      - axisName: Fire1
+        axisPositiveSide: 1
+      keyList: 
+    digiFaceRightBinding:
+      enabled: 1
+      axisList:
+      - axisName: Jump
+        axisPositiveSide: 1
+      keyList: 
+    digiFaceLeftBinding:
+      enabled: 1
+      axisList:
+      - axisName: Fire2
+        axisPositiveSide: 1
+      keyList: 
+    digiFaceUpBinding:
+      enabled: 1
+      axisList:
+      - axisName: Fire3
+        axisPositiveSide: 1
+      keyList: 
+    digiStartBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiSelectBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiL1Binding:
+      enabled: 1
+      axisList:
+      - axisName: Fire2
+        axisPositiveSide: 1
+      keyList: 
+    digiR1Binding:
+      enabled: 1
+      axisList:
+      - axisName: Fire1
+        axisPositiveSide: 1
+      keyList: 
+    digiL2Binding:
+      enabled: 1
+      axisList:
+      - axisName: Fire2
+        axisPositiveSide: 1
+      keyList: 
+    digiR2Binding:
+      enabled: 1
+      axisList:
+      - axisName: Fire1
+        axisPositiveSide: 1
+      keyList: 
+    digiL3Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    digiR3Binding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    analogL2Binding:
+      enabled: 0
+      targetList: []
+    analogR2Binding:
+      enabled: 0
+      targetList: []
+    leftStickStateBinding:
+      enabled: 1
+      horzAxisBinding:
+        enabled: 1
+        targetList:
+        - separateAxes: 0
+          singleAxis: Horizontal
+          reverseSingleAxis: 0
+          positiveAxis: 
+          negativeAxis: 
+          positiveAxisAsPositive: 1
+          negativeAxisAsPositive: 1
+      vertAxisBinding:
+        enabled: 1
+        targetList:
+        - separateAxes: 0
+          singleAxis: Vertical
+          reverseSingleAxis: 0
+          positiveAxis: 
+          negativeAxis: 
+          positiveAxisAsPositive: 1
+          negativeAxisAsPositive: 1
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+    rightStickStateBinding:
+      enabled: 1
+      horzAxisBinding:
+        enabled: 1
+        targetList:
+        - separateAxes: 0
+          singleAxis: Mouse X
+          reverseSingleAxis: 0
+          positiveAxis: 
+          negativeAxis: 
+          positiveAxisAsPositive: 1
+          negativeAxisAsPositive: 1
+      vertAxisBinding:
+        enabled: 1
+        targetList:
+        - separateAxes: 0
+          singleAxis: Mouse Y
+          reverseSingleAxis: 0
+          positiveAxis: 
+          negativeAxis: 
+          positiveAxisAsPositive: 1
+          negativeAxisAsPositive: 1
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+    dpadStateBinding:
+      enabled: 1
+      horzAxisBinding:
+        enabled: 1
+        targetList:
+        - separateAxes: 0
+          singleAxis: Horizontal
+          reverseSingleAxis: 0
+          positiveAxis: 
+          negativeAxis: 
+          positiveAxisAsPositive: 1
+          negativeAxisAsPositive: 1
+      vertAxisBinding:
+        enabled: 1
+        targetList:
+        - separateAxes: 0
+          singleAxis: Vertical
+          reverseSingleAxis: 0
+          positiveAxis: 
+          negativeAxis: 
+          positiveAxisAsPositive: 1
+          negativeAxisAsPositive: 1
+      dirBinding:
+        enabled: 0
+        bindDiagonals: 1
+        bindMode: 0
+        dirBindingU:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDR:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingD:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingDL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingUL:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingN:
+          enabled: 0
+          axisList: []
+          keyList: 
+        dirBindingAny:
+          enabled: 0
+          axisList: []
+          keyList: 
+  rigSwitches:
+    list: []
+  autoInputList:
+    list: []
+  tilt:
+    tiltState:
+      analogRange: {x: 25, y: 25}
+    disablingConditions:
+      mobileModeRelation: 0
+      disableWhenTouchScreenInactive: 0
+      disableWhenCursorIsUnlocked: 0
+      switchList: []
+    rollAnalogConfig:
+      analogDeadZone: 0.3
+      analogEndZone: 1
+      analogRangeStartValue: 0
+      digitalEnterThresh: 0.5
+      digitalLeaveThresh: 0.2
+      digitalToAnalogPressSpeed: 0.5
+      digitalToAnalogReleaseSpeed: 0.5
+      useRamp: 0
+      ramp:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.5
+          value: 0.5
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    pitchAnalogConfig:
+      analogDeadZone: 0.3
+      analogEndZone: 1
+      analogRangeStartValue: 0
+      digitalEnterThresh: 0.5
+      digitalLeaveThresh: 0.2
+      digitalToAnalogPressSpeed: 0.5
+      digitalToAnalogReleaseSpeed: 0.5
+      useRamp: 0
+      ramp:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.5
+          value: 0.5
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    rollBinding:
+      enabled: 0
+      targetList:
+      - separateAxes: 0
+        singleAxis: Horizontal
+        reverseSingleAxis: 0
+        positiveAxis: 
+        negativeAxis: 
+        positiveAxisAsPositive: 1
+        negativeAxisAsPositive: 1
+    pitchBinding:
+      enabled: 0
+      targetList:
+      - separateAxes: 0
+        singleAxis: Vertical
+        reverseSingleAxis: 0
+        positiveAxis: 
+        negativeAxis: 
+        positiveAxisAsPositive: 1
+        negativeAxisAsPositive: 1
+    rollLeftBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    rollRightBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    pitchForwardBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+    pitchBackwardBinding:
+      enabled: 0
+      axisList: []
+      keyList: 
+  mouseConfig:
+    horzDeltaBinding:
+      enabled: 1
+      targetList:
+      - separateAxes: 0
+        singleAxis: Mouse X
+        reverseSingleAxis: 0
+        positiveAxis: 
+        negativeAxis: 
+        positiveAxisAsPositive: 1
+        negativeAxisAsPositive: 1
+    vertDeltaBinding:
+      enabled: 1
+      targetList:
+      - separateAxes: 0
+        singleAxis: Mouse Y
+        reverseSingleAxis: 0
+        positiveAxis: 
+        negativeAxis: 
+        positiveAxisAsPositive: 1
+        negativeAxisAsPositive: 1
+  scrollWheel:
+    horzScrollDeltaBinding:
+      enabled: 1
+      deltaBinding:
+        enabled: 1
+        targetList:
+        - separateAxes: 0
+          singleAxis: Mouse ScrollWheel Secondary
+          reverseSingleAxis: 0
+          positiveAxis: 
+          negativeAxis: 
+          positiveAxisAsPositive: 1
+          negativeAxisAsPositive: 1
+      positiveDigitalBinding:
+        enabled: 0
+        axisList: []
+        keyList: 
+      negativeDigitalBinding:
+        enabled: 0
+        axisList: []
+        keyList: 
+    vertScrollDeltaBinding:
+      enabled: 1
+      deltaBinding:
+        enabled: 1
+        targetList:
+        - separateAxes: 0
+          singleAxis: Mouse ScrollWheel
+          reverseSingleAxis: 0
+          positiveAxis: 
+          negativeAxis: 
+          positiveAxisAsPositive: 1
+          negativeAxisAsPositive: 1
+      positiveDigitalBinding:
+        enabled: 0
+        axisList: []
+        keyList: 
+      negativeDigitalBinding:
+        enabled: 0
+        axisList: []
+        keyList: 
 --- !u!1 &486338963
 GameObject:
   m_ObjectHideFlags: 0
@@ -18989,6 +22120,263 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550923275}
   m_CullTransparentMesh: 0
+--- !u!1 &552384842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 552384843}
+  - component: {fileID: 552384846}
+  - component: {fileID: 552384845}
+  - component: {fileID: 552384844}
+  m_Layer: 0
+  m_Name: Joystick-Hat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &552384843
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552384842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1426729443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.125, y: 0.125}
+  m_AnchorMax: {x: 0.875, y: 0.875}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &552384844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552384842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b157099fa5ec75144808407db47c6a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToSource: 1
+  sourceControl: {fileID: 1426729444}
+  spriteNeutral:
+    enabled: 1
+    sprite: {fileID: 21300000, guid: fcdcf0258794fb44298ee36183440e49, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 0.33}
+    scale: 1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteMode: 0
+  spriteNeutralPressed:
+    enabled: 1
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUp:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUpRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDownRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDown:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDownLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUpLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.2
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  animateTransl: 1
+  moveScale: {x: 0.5, y: 0.5}
+  translationSmoothingTime: 0.1
+  rotationMode: 0
+  simpleRotationRange: 45
+  rotationSmoothingTime: 0.01
+--- !u!114 &552384845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552384842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: fcdcf0258794fb44298ee36183440e49, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &552384846
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552384842}
+  m_CullTransparentMesh: 1
 --- !u!1 &554477635 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8497607596759290184, guid: 5cd0421b24a1e6c489f2f12127ae0ebf,
@@ -19857,6 +23245,160 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579204441}
   m_CullTransparentMesh: 0
+--- !u!1 &587577103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 587577104}
+  - component: {fileID: 587577107}
+  - component: {fileID: 587577106}
+  - component: {fileID: 587577105}
+  m_Layer: 0
+  m_Name: Jump-Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &587577104
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587577103}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 794500938}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &587577105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587577103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058d21773499e78468e8aa6a47f82959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToSource: 1
+  sourceControl: {fileID: 794500939}
+  spriteNeutral:
+    enabled: 1
+    sprite: {fileID: 21300000, guid: 175fc87678189ab4cb9f487e21bb71fc, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 0.33}
+    scale: 1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spritePressed:
+    enabled: 1
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.25
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteToggled:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteToggledAndPressed:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.3
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+--- !u!114 &587577106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587577103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 175fc87678189ab4cb9f487e21bb71fc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &587577107
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587577103}
+  m_CullTransparentMesh: 1
 --- !u!1 &593194157
 GameObject:
   m_ObjectHideFlags: 0
@@ -21774,7 +25316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 673899422}
   m_Layer: 0
-  m_Name: -------------CONTROLLER-------------
+  m_Name: -------------PLAYER CONTROLLER-------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23580,6 +27122,108 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0015029907, y: -15.001007}
   m_SizeDelta: {x: 250, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &762686720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 762686721}
+  - component: {fileID: 762686724}
+  - component: {fileID: 762686723}
+  - component: {fileID: 762686722}
+  m_Layer: 0
+  m_Name: CF2-Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &762686721
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762686720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1368962434}
+  m_Father: {fileID: 480678743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &762686722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762686720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &762686723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762686720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 480}
+  m_ScreenMatchMode: 1
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &762686724
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762686720}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 1
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &762970104
 GameObject:
   m_ObjectHideFlags: 0
@@ -26776,6 +30420,110 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793225642}
   m_CullTransparentMesh: 0
+--- !u!1 &794500937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 794500938}
+  - component: {fileID: 794500939}
+  m_Layer: 0
+  m_Name: Jump
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &794500938
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794500937}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 587577104}
+  m_Father: {fileID: 1368962434}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -40.800003, y: 40.800003}
+  m_SizeDelta: {x: 72, y: 72}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &794500939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794500937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200e84c2a433bd44a81bed0f6a4a052c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreFingerRadius: 0
+  cantBeControlledDirectly: 0
+  shareTouch: 0
+  dontAcceptSharedTouches: 0
+  canBeSwipedOver: 0
+  restictSwipeOverTargets: 0
+  swipeOverOthersMode: 2
+  swipeOffMode: 2
+  swipeOverTargetList: []
+  shape: 2
+  disablingConditions:
+    mobileModeRelation: 0
+    disableWhenTouchScreenInactive: 1
+    disableWhenCursorIsUnlocked: 0
+    switchList: []
+  fadeOutWhenReleased: 1
+  startFadedOut: 1
+  fadeOutTargetAlpha: 0
+  fadeInDuration: 0.2
+  fadeOutDelay: 0.5
+  fadeOutDuration: 0.5
+  centerOnDirectTouch: 1
+  centerOnIndirectTouch: 1
+  centerWhenFollowing: 1
+  stickyMode: 0
+  clampInsideRegion: 1
+  clampInsideCanvas: 1
+  returnToStartingPosition: 0
+  directInitialVector: {x: 0, y: 0}
+  indirectInitialVector: {x: 0, y: 0}
+  touchSmoothing: 0.1
+  originSmoothTime: 0.5
+  targetDynamicRegion: {fileID: 0}
+  toggle: 0
+  toggleOnAction: 0
+  toggleOffAction: 1
+  toggleOffWhenHiding: 0
+  autoToggleOff: 0
+  autoToggleOffTimeOut: 1
+  linkToggleToRigSwitch: 0
+  toggleRigSwitchName: 
+  pressBinding:
+    enabled: 1
+    axisList:
+    - axisName: Jump
+      axisPositiveSide: 1
+    keyList: 20000000
+  toggleOnlyBinding:
+    enabled: 0
+    axisList: []
+    keyList: 
+  emulateTouchPressure: 1
+  touchPressureBinding:
+    enabled: 0
+    targetList: []
 --- !u!1 &798347068
 GameObject:
   m_ObjectHideFlags: 0
@@ -30553,6 +34301,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895209739}
   m_CullTransparentMesh: 0
+--- !u!1 &896093048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 896093049}
+  - component: {fileID: 896093050}
+  m_Layer: 0
+  m_Name: CF2-Gamepad-Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &896093049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896093048}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -740.2694, y: -556.76227, z: -560.9031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 407669682}
+  m_Father: {fileID: 1296438991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &896093050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896093048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bff5b65a8c619340b59028dc2a91816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  connectionCheckInterval: 1
 --- !u!1 &907629745 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8497607596759290184, guid: 5cd0421b24a1e6c489f2f12127ae0ebf,
@@ -35711,6 +39506,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123349802}
   m_CullTransparentMesh: 0
+--- !u!1 &1131093038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1131093039}
+  - component: {fileID: 1131093040}
+  m_Layer: 0
+  m_Name: Action-Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1131093039
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131093038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1140244970}
+  m_Father: {fileID: 1368962434}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -122.399994, y: 40.800003}
+  m_SizeDelta: {x: 72, y: 72}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1131093040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131093038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200e84c2a433bd44a81bed0f6a4a052c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreFingerRadius: 0
+  cantBeControlledDirectly: 0
+  shareTouch: 0
+  dontAcceptSharedTouches: 0
+  canBeSwipedOver: 0
+  restictSwipeOverTargets: 0
+  swipeOverOthersMode: 2
+  swipeOffMode: 2
+  swipeOverTargetList: []
+  shape: 2
+  disablingConditions:
+    mobileModeRelation: 0
+    disableWhenTouchScreenInactive: 1
+    disableWhenCursorIsUnlocked: 0
+    switchList: []
+  fadeOutWhenReleased: 1
+  startFadedOut: 1
+  fadeOutTargetAlpha: 0
+  fadeInDuration: 0.2
+  fadeOutDelay: 0.5
+  fadeOutDuration: 0.5
+  centerOnDirectTouch: 1
+  centerOnIndirectTouch: 1
+  centerWhenFollowing: 1
+  stickyMode: 0
+  clampInsideRegion: 1
+  clampInsideCanvas: 1
+  returnToStartingPosition: 0
+  directInitialVector: {x: 0, y: 0}
+  indirectInitialVector: {x: 0, y: 0}
+  touchSmoothing: 0.1
+  originSmoothTime: 0.5
+  targetDynamicRegion: {fileID: 0}
+  toggle: 0
+  toggleOnAction: 0
+  toggleOffAction: 1
+  toggleOffWhenHiding: 0
+  autoToggleOff: 0
+  autoToggleOffTimeOut: 1
+  linkToggleToRigSwitch: 0
+  toggleRigSwitchName: 
+  pressBinding:
+    enabled: 1
+    axisList: []
+    keyList: 65000000
+  toggleOnlyBinding:
+    enabled: 0
+    axisList: []
+    keyList: 
+  emulateTouchPressure: 1
+  touchPressureBinding:
+    enabled: 0
+    targetList: []
 --- !u!1 &1131765198
 GameObject:
   m_ObjectHideFlags: 0
@@ -35818,6 +39715,160 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1132996167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132996168}
+  - component: {fileID: 1132996171}
+  - component: {fileID: 1132996170}
+  - component: {fileID: 1132996169}
+  m_Layer: 0
+  m_Name: Crouch-Button-Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1132996168
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132996167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1854176311}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1132996169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132996167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058d21773499e78468e8aa6a47f82959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToSource: 1
+  sourceControl: {fileID: 1854176312}
+  spriteNeutral:
+    enabled: 1
+    sprite: {fileID: 21300000, guid: 4cfeab4a5d332834cbf92cc91fa441f3, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 0.33}
+    scale: 1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spritePressed:
+    enabled: 1
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.25
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteToggled:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteToggledAndPressed:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.3
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+--- !u!114 &1132996170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132996167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4cfeab4a5d332834cbf92cc91fa441f3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1132996171
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132996167}
+  m_CullTransparentMesh: 1
 --- !u!1 &1133693890
 GameObject:
   m_ObjectHideFlags: 0
@@ -36124,6 +40175,160 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1870937878}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1140244969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140244970}
+  - component: {fileID: 1140244973}
+  - component: {fileID: 1140244972}
+  - component: {fileID: 1140244971}
+  m_Layer: 0
+  m_Name: Action-Button-Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1140244970
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140244969}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1131093039}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1140244971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140244969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058d21773499e78468e8aa6a47f82959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToSource: 1
+  sourceControl: {fileID: 1131093040}
+  spriteNeutral:
+    enabled: 1
+    sprite: {fileID: 21300000, guid: 53637b3a2e9d2474bb6e35685923b788, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 0.33}
+    scale: 1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spritePressed:
+    enabled: 1
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.25
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteToggled:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteToggledAndPressed:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.3
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: 0.1
+    baseTransitionTime: 0.1
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+--- !u!114 &1140244972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140244969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 53637b3a2e9d2474bb6e35685923b788, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1140244973
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140244969}
+  m_CullTransparentMesh: 1
 --- !u!1 &1142270140
 GameObject:
   m_ObjectHideFlags: 0
@@ -40472,6 +44677,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293947279}
   m_CullTransparentMesh: 0
+--- !u!1 &1296438990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296438991}
+  m_Layer: 0
+  m_Name: -------------CONTROL FREAK---------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1296438991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296438990}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 740.2694, y: 556.76227, z: 560.9031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 896093049}
+  - {fileID: 480678743}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1296971996
 GameObject:
   m_ObjectHideFlags: 0
@@ -42780,6 +47018,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359998013}
   m_CullTransparentMesh: 0
+--- !u!1 &1368962433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1368962434}
+  - component: {fileID: 1368962436}
+  - component: {fileID: 1368962435}
+  - component: {fileID: 1368962437}
+  m_Layer: 0
+  m_Name: CF2-Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1368962434
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368962433}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 794500938}
+  - {fileID: 1717990497}
+  - {fileID: 1641693372}
+  - {fileID: 1131093039}
+  - {fileID: 1854176311}
+  m_Father: {fileID: 762686721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1368962435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368962433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0df8f6cb3d9d74abaf8582e7b07070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1368962436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368962433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81705b1c486dc3b468f7cc553a648228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToRig: 1
+  rig: {fileID: 480678744}
+--- !u!222 &1368962437
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368962433}
+  m_CullTransparentMesh: 1
 --- !u!1 &1371183739
 GameObject:
   m_ObjectHideFlags: 0
@@ -49311,6 +53630,213 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed75bb4ab126e164f9d5e2e506ce9047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1426729442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1426729443}
+  - component: {fileID: 1426729444}
+  m_Layer: 0
+  m_Name: Joystick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1426729443
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426729442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 153140825}
+  - {fileID: 552384843}
+  m_Father: {fileID: 1717990497}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 72, y: 72}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1426729444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426729442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294a8c1378026744583a542cf9af0572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreFingerRadius: 0
+  cantBeControlledDirectly: 0
+  shareTouch: 0
+  dontAcceptSharedTouches: 0
+  canBeSwipedOver: 0
+  restictSwipeOverTargets: 0
+  swipeOverOthersMode: 2
+  swipeOffMode: 2
+  swipeOverTargetList: []
+  shape: 2
+  disablingConditions:
+    mobileModeRelation: 0
+    disableWhenTouchScreenInactive: 1
+    disableWhenCursorIsUnlocked: 0
+    switchList: []
+  fadeOutWhenReleased: 1
+  startFadedOut: 1
+  fadeOutTargetAlpha: 0
+  fadeInDuration: 0.2
+  fadeOutDelay: 0.5
+  fadeOutDuration: 0.5
+  centerOnDirectTouch: 1
+  centerOnIndirectTouch: 1
+  centerWhenFollowing: 0
+  stickyMode: 1
+  clampInsideRegion: 1
+  clampInsideCanvas: 1
+  returnToStartingPosition: 0
+  directInitialVector: {x: 0, y: 0}
+  indirectInitialVector: {x: 0, y: 0}
+  touchSmoothing: 0.1
+  originSmoothTime: 0.5
+  targetDynamicRegion: {fileID: 1717990498}
+  config:
+    analogDeadZone: 0.1
+    analogEndZone: 1
+    analogRangeStartValue: 0
+    digitalEnterThresh: 0.6
+    digitalLeaveThresh: 0.3
+    digitalToAnalogPressSpeed: 0.5
+    digitalToAnalogReleaseSpeed: 0.5
+    useRamp: 0
+    ramp:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    clampMode: 1
+    perAxisDeadzones: 0
+    stickMode: 0
+    originalDirResetMode: 0
+    angularMagnet: 0.5
+    digitalDetectionMode: 0
+    blockX: 0
+    blockY: 0
+  pressBinding:
+    enabled: 0
+    axisList: []
+    keyList: 
+  joyStateBinding:
+    enabled: 1
+    horzAxisBinding:
+      enabled: 1
+      targetList:
+      - separateAxes: 0
+        singleAxis: Horizontal
+        reverseSingleAxis: 0
+        positiveAxis: 
+        negativeAxis: 
+        positiveAxisAsPositive: 1
+        negativeAxisAsPositive: 1
+    vertAxisBinding:
+      enabled: 1
+      targetList:
+      - separateAxes: 0
+        singleAxis: Vertical
+        reverseSingleAxis: 0
+        positiveAxis: 
+        negativeAxis: 
+        positiveAxisAsPositive: 1
+        negativeAxisAsPositive: 1
+    dirBinding:
+      enabled: 0
+      bindDiagonals: 1
+      bindMode: 0
+      dirBindingU:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingUR:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingR:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingDR:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingD:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingDL:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingL:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingUL:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingN:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingAny:
+        enabled: 0
+        axisList: []
+        keyList: 
+  emulateTouchPressure: 1
+  touchPressureBinding:
+    enabled: 0
+    targetList: []
 --- !u!1 &1433879904
 GameObject:
   m_ObjectHideFlags: 0
@@ -56182,6 +60708,98 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 7}
   m_SizeDelta: {x: 0, y: -60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1641693371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1641693372}
+  - component: {fileID: 1641693373}
+  m_Layer: 0
+  m_Name: Look-TrackPad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1641693372
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641693371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 70}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1368962434}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1641693373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641693371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33905c8b496b3e04ea9ab26ec3513c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreFingerRadius: 0
+  cantBeControlledDirectly: 0
+  shareTouch: 0
+  dontAcceptSharedTouches: 0
+  canBeSwipedOver: 0
+  restictSwipeOverTargets: 0
+  swipeOverOthersMode: 2
+  swipeOffMode: 2
+  swipeOverTargetList: []
+  shape: 0
+  disablingConditions:
+    mobileModeRelation: 0
+    disableWhenTouchScreenInactive: 1
+    disableWhenCursorIsUnlocked: 0
+    switchList: []
+  touchSmoothing: 0.5
+  pressBinding:
+    enabled: 0
+    axisList: []
+    keyList: 
+  horzSwipeBinding:
+    enabled: 1
+    targetList:
+    - separateAxes: 0
+      singleAxis: Mouse X
+      reverseSingleAxis: 0
+      positiveAxis: 
+      negativeAxis: 
+      positiveAxisAsPositive: 1
+      negativeAxisAsPositive: 1
+  vertSwipeBinding:
+    enabled: 1
+    targetList:
+    - separateAxes: 0
+      singleAxis: Mouse Y
+      reverseSingleAxis: 0
+      positiveAxis: 
+      negativeAxis: 
+      positiveAxisAsPositive: 1
+      negativeAxisAsPositive: 1
+  emulateTouchPressure: 1
+  touchPressureBinding:
+    enabled: 0
+    targetList: []
 --- !u!1 &1643940482
 GameObject:
   m_ObjectHideFlags: 0
@@ -56830,7 +61448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1658745460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56845,6 +61463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1516080897}
   navMeshPathDrawer: {fileID: 799542841}
+  lineRenderer: {fileID: 0}
   navigationButton: {fileID: 138110724}
   navigationListPanel: {fileID: 0}
   navigationTargets:
@@ -57987,6 +62606,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716988552}
   m_CullTransparentMesh: 0
+--- !u!1 &1717990496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1717990497}
+  - component: {fileID: 1717990498}
+  m_Layer: 0
+  m_Name: Joystick-Region
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1717990497
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717990496}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 70}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1426729443}
+  m_Father: {fileID: 1368962434}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -35, y: -125}
+  m_SizeDelta: {x: -130, y: -250}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1717990498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717990496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371d284a20ca80145bc6ca05d372bb96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreFingerRadius: 1
+  cantBeControlledDirectly: 0
+  shareTouch: 0
+  dontAcceptSharedTouches: 0
+  canBeSwipedOver: 0
+  restictSwipeOverTargets: 0
+  swipeOverOthersMode: 2
+  swipeOffMode: 2
+  swipeOverTargetList: []
+  shape: 0
+  disablingConditions:
+    mobileModeRelation: 0
+    disableWhenTouchScreenInactive: 1
+    disableWhenCursorIsUnlocked: 0
+    switchList: []
 --- !u!1 &1720577743
 GameObject:
   m_ObjectHideFlags: 0
@@ -65867,6 +70550,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850238631}
   m_CullTransparentMesh: 0
+--- !u!1 &1854176310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1854176311}
+  - component: {fileID: 1854176312}
+  m_Layer: 0
+  m_Name: Crouch-Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1854176311
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854176310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1132996168}
+  m_Father: {fileID: 1368962434}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -40.799995, y: 122.399994}
+  m_SizeDelta: {x: 72, y: 72}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1854176312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854176310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200e84c2a433bd44a81bed0f6a4a052c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreFingerRadius: 0
+  cantBeControlledDirectly: 0
+  shareTouch: 0
+  dontAcceptSharedTouches: 0
+  canBeSwipedOver: 0
+  restictSwipeOverTargets: 0
+  swipeOverOthersMode: 2
+  swipeOffMode: 2
+  swipeOverTargetList: []
+  shape: 2
+  disablingConditions:
+    mobileModeRelation: 0
+    disableWhenTouchScreenInactive: 1
+    disableWhenCursorIsUnlocked: 0
+    switchList: []
+  fadeOutWhenReleased: 1
+  startFadedOut: 1
+  fadeOutTargetAlpha: 0
+  fadeInDuration: 0.2
+  fadeOutDelay: 0.5
+  fadeOutDuration: 0.5
+  centerOnDirectTouch: 1
+  centerOnIndirectTouch: 1
+  centerWhenFollowing: 1
+  stickyMode: 0
+  clampInsideRegion: 1
+  clampInsideCanvas: 1
+  returnToStartingPosition: 0
+  directInitialVector: {x: 0, y: 0}
+  indirectInitialVector: {x: 0, y: 0}
+  touchSmoothing: 0.1
+  originSmoothTime: 0.5
+  targetDynamicRegion: {fileID: 0}
+  toggle: 0
+  toggleOnAction: 0
+  toggleOffAction: 1
+  toggleOffWhenHiding: 0
+  autoToggleOff: 0
+  autoToggleOffTimeOut: 1
+  linkToggleToRigSwitch: 0
+  toggleRigSwitchName: 
+  pressBinding:
+    enabled: 1
+    axisList: []
+    keyList: 63000000
+  toggleOnlyBinding:
+    enabled: 0
+    axisList: []
+    keyList: 
+  emulateTouchPressure: 1
+  touchPressureBinding:
+    enabled: 0
+    targetList: []
 --- !u!1 &1856238757
 GameObject:
   m_ObjectHideFlags: 0
@@ -76950,4 +81735,5 @@ SceneRoots:
   - {fileID: 4685656024679691995}
   - {fileID: 767133966}
   - {fileID: 1071799633}
+  - {fileID: 1296438991}
   - {fileID: 798347071}

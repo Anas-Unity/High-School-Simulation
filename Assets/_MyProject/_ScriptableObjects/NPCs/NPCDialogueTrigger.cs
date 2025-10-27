@@ -82,7 +82,7 @@ public class NPCDialogueTrigger : MonoBehaviour
                 NavigationManager.Instance.SetDestination(navigationTargetIndex);
 
                 // Optionally, automatically activate path
-                NavigationManager.Instance.ToggleNavigation();
+                NavigationManager.Instance.EnableNavigation(true);
             }
             else
             {

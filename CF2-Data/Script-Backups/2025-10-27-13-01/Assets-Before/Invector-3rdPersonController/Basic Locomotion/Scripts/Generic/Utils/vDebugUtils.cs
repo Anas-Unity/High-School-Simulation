@@ -39,7 +39,7 @@ public class vDebugUtils : MonoBehaviour
 
     private void Update()
     {
-        if (ControlFreak2.CF2Input.GetKeyDown(timeScaleDown))
+        if (Input.GetKeyDown(timeScaleDown))
         {
             Time.timeScale = Mathf.Clamp(Time.timeScale - timeScaleChangeValue, 0, 1f);
             if (affectFixedDeltaTime)
@@ -47,7 +47,7 @@ public class vDebugUtils : MonoBehaviour
                 Time.fixedDeltaTime = Time.timeScale * currentFixedDeltaTime;
             }
         }
-        else if (ControlFreak2.CF2Input.GetKeyDown(timeScaleUp))
+        else if (Input.GetKeyDown(timeScaleUp))
         {
             Time.timeScale = Mathf.Clamp(Time.timeScale + timeScaleChangeValue, 0, 1f);
             if (affectFixedDeltaTime)

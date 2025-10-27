@@ -43,21 +43,21 @@ namespace Invector.vCharacterController.AI
 
         protected virtual void CompanionInputs()
         {
-            if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 companionState = CompanionState.Stay;
                 agressiveAtFirstSight = false;
             }
-            if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 companionState = CompanionState.Follow;
                 agressiveAtFirstSight = false;
             }
-            if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 agressiveAtFirstSight = !agressiveAtFirstSight;
             }
-            if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.Alpha4) && moveToTarget != null)
+            if (Input.GetKeyDown(KeyCode.Alpha4) && moveToTarget != null)
             {
                 SetMoveTo(moveToTarget);
                 companionState = CompanionState.MoveTo;

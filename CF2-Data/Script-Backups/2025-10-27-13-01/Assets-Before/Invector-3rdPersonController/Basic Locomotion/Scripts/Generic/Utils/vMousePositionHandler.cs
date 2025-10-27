@@ -49,11 +49,11 @@ namespace Invector.vCharacterController
                 switch (inputDevice)
                 {
                     case InputDevice.MouseKeyboard:
-                        return ControlFreak2.CF2Input.mousePosition;
+                        return Input.mousePosition;
                     case InputDevice.Joystick:
-                        joystickMousePos.x += ControlFreak2.CF2Input.GetAxis("RightAnalogHorizontal") * joystickSensitivity;
+                        joystickMousePos.x += Input.GetAxis("RightAnalogHorizontal") * joystickSensitivity;
                         joystickMousePos.x = Mathf.Clamp(joystickMousePos.x, -(Screen.width * 0.5f), (Screen.width * 0.5f));
-                        joystickMousePos.y += ControlFreak2.CF2Input.GetAxis("RightAnalogVertical") * joystickSensitivity;
+                        joystickMousePos.y += Input.GetAxis("RightAnalogVertical") * joystickSensitivity;
                         joystickMousePos.y = Mathf.Clamp(joystickMousePos.y, -(Screen.height * 0.5f), (Screen.height * 0.5f));
                         var screenCenter = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
                         var result = joystickMousePos + screenCenter;
@@ -64,9 +64,9 @@ namespace Invector.vCharacterController
                         if (clampScreen)
                         {
 #if MOBILE_INPUT
-                            joystickMousePos.x += ControlFreak2.CF2Input.GetAxis("RightAnalogHorizontal") * joystickSensitivity;
+                            joystickMousePos.x += CrossPlatformInputManager.GetAxis("RightAnalogHorizontal") * joystickSensitivity;
                             joystickMousePos.x = Mathf.Clamp(joystickMousePos.x, -(Screen.width * 0.5f), (Screen.width * 0.5f));
-                            joystickMousePos.y += ControlFreak2.CF2Input.GetAxis("RightAnalogVertical") * joystickSensitivity;
+                            joystickMousePos.y += CrossPlatformInputManager.GetAxis("RightAnalogVertical") * joystickSensitivity;
                             joystickMousePos.y = Mathf.Clamp(joystickMousePos.y, -(Screen.height * 0.5f), (Screen.height * 0.5f));
                             var mobileScreenCenter = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
                             var mobileResult = joystickMousePos + mobileScreenCenter;
@@ -74,7 +74,7 @@ namespace Invector.vCharacterController
                             mobileResult.y = Mathf.Clamp(mobileResult.y, 0, Screen.height);
                             return mobileResult;
 #else
-                                                    return ControlFreak2.CF2Input.GetTouch(0).deltaPosition;
+                                                    return Input.GetTouch(0).deltaPosition;
 #endif
                         }
                         else
@@ -82,7 +82,7 @@ namespace Invector.vCharacterController
                             return joystickMousePos;
                         }
 
-                    default: return ControlFreak2.CF2Input.mousePosition;
+                    default: return Input.mousePosition;
                 }
             }
         }

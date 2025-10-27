@@ -207,7 +207,7 @@ namespace Invector.vShooter
         private void UpdateAimSize()
         {
             float scale = 1f;
-            if (scaleAimWithMovement && (cc.input.magnitude > movementSensibility || Mathf.Abs(ControlFreak2.CF2Input.GetAxis("Mouse X")) > movementSensibility || Mathf.Abs(ControlFreak2.CF2Input.GetAxis("Mouse Y")) > movementSensibility))
+            if (scaleAimWithMovement && (cc.input.magnitude > movementSensibility || Mathf.Abs(Input.GetAxis("Mouse X")) > movementSensibility || Mathf.Abs(Input.GetAxis("Mouse Y")) > movementSensibility))
             {
                 scale = scaleWithMovement;               
             }

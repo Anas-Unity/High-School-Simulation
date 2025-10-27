@@ -119,13 +119,13 @@ namespace Invector.vCharacterController
         private bool isMobileInput()
         {
 #if UNITY_EDITOR && UNITY_MOBILE
-            if (EventSystem.current.IsPointerOverGameObject() && ControlFreak2.CF2Input.GetMouseButtonDown(0))
+            if (EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButtonDown(0))
             {
                 return true;
             }
 		
 #elif MOBILE_INPUT
-            if (EventSystem.current.IsPointerOverGameObject() || (ControlFreak2.CF2Input.touches.Length > 0))
+            if (EventSystem.current.IsPointerOverGameObject() || (Input.touches.Length > 0))
                 return true;
 #endif
             return false;
@@ -140,7 +140,7 @@ namespace Invector.vCharacterController
             if (Event.current.isKey || Event.current.isMouse)
                 return true;
             // mouse movement
-            if (ControlFreak2.CF2Input.GetAxis("Mouse X") != 0.0f || ControlFreak2.CF2Input.GetAxis("Mouse Y") != 0.0f)
+            if (Input.GetAxis("Mouse X") != 0.0f || Input.GetAxis("Mouse Y") != 0.0f)
                 return true;
 
             return false;
@@ -150,39 +150,39 @@ namespace Invector.vCharacterController
         private bool isJoystickInput()
         {
             // joystick buttons
-            if (ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button0) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button1) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button2) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button3) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button4) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button5) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button6) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button7) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button8) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button9) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button10) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button11) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button12) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button13) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button14) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button15) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button16) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button17) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button18) ||
-                ControlFreak2.CF2Input.GetKey(KeyCode.Joystick1Button19))
+            if (Input.GetKey(KeyCode.Joystick1Button0) ||
+                Input.GetKey(KeyCode.Joystick1Button1) ||
+                Input.GetKey(KeyCode.Joystick1Button2) ||
+                Input.GetKey(KeyCode.Joystick1Button3) ||
+                Input.GetKey(KeyCode.Joystick1Button4) ||
+                Input.GetKey(KeyCode.Joystick1Button5) ||
+                Input.GetKey(KeyCode.Joystick1Button6) ||
+                Input.GetKey(KeyCode.Joystick1Button7) ||
+                Input.GetKey(KeyCode.Joystick1Button8) ||
+                Input.GetKey(KeyCode.Joystick1Button9) ||
+                Input.GetKey(KeyCode.Joystick1Button10) ||
+                Input.GetKey(KeyCode.Joystick1Button11) ||
+                Input.GetKey(KeyCode.Joystick1Button12) ||
+                Input.GetKey(KeyCode.Joystick1Button13) ||
+                Input.GetKey(KeyCode.Joystick1Button14) ||
+                Input.GetKey(KeyCode.Joystick1Button15) ||
+                Input.GetKey(KeyCode.Joystick1Button16) ||
+                Input.GetKey(KeyCode.Joystick1Button17) ||
+                Input.GetKey(KeyCode.Joystick1Button18) ||
+                Input.GetKey(KeyCode.Joystick1Button19))
             {
                 return true;
             }
 
             // joystick axis
-            if (ControlFreak2.CF2Input.GetAxis("LeftAnalogHorizontal") != 0.0f ||
-                ControlFreak2.CF2Input.GetAxis("LeftAnalogVertical") != 0.0f ||
-                ControlFreak2.CF2Input.GetAxis("RightAnalogHorizontal") != 0.0f ||
-                ControlFreak2.CF2Input.GetAxis("RightAnalogVertical") != 0.0f ||
-                ControlFreak2.CF2Input.GetAxis("LT") != 0.0f ||
-                ControlFreak2.CF2Input.GetAxis("RT") != 0.0f ||
-                ControlFreak2.CF2Input.GetAxis("D-Pad Horizontal") != 0.0f ||
-                ControlFreak2.CF2Input.GetAxis("D-Pad Vertical") != 0.0f)
+            if (Input.GetAxis("LeftAnalogHorizontal") != 0.0f ||
+                Input.GetAxis("LeftAnalogVertical") != 0.0f ||
+                Input.GetAxis("RightAnalogHorizontal") != 0.0f ||
+                Input.GetAxis("RightAnalogVertical") != 0.0f ||
+                Input.GetAxis("LT") != 0.0f ||
+                Input.GetAxis("RT") != 0.0f ||
+                Input.GetAxis("D-Pad Horizontal") != 0.0f ||
+                Input.GetAxis("D-Pad Vertical") != 0.0f)
             {
                 return true;
             }
@@ -391,7 +391,7 @@ namespace Invector.vCharacterController
             if (inputDevice == InputDevice.Mobile)
             {
 #if MOBILE_INPUT
-                if (ControlFreak2.CF2Input.GetButton(this.buttonName))
+                if (CrossPlatformInputManager.GetButton(this.buttonName))
 #endif
                     return true;
             }
@@ -400,19 +400,19 @@ namespace Invector.vCharacterController
             {
                 if (isKey)
                 {
-                    if (ControlFreak2.CF2Input.GetKey(key))
+                    if (Input.GetKey(key))
                         return true;
                 }
                 else
                 {
-                    if (ControlFreak2.CF2Input.GetButton(this.buttonName))
+                    if (Input.GetButton(this.buttonName))
                         return true;
                 }
             }
             // joystick
             else if (inputDevice == InputDevice.Joystick)
             {
-                if (ControlFreak2.CF2Input.GetButton(this.buttonName))
+                if (Input.GetButton(this.buttonName))
                     return true;
             }
             return false;
@@ -430,7 +430,7 @@ namespace Invector.vCharacterController
             if (inputDevice == InputDevice.Mobile)
             {
 #if MOBILE_INPUT
-                if (ControlFreak2.CF2Input.GetButtonDown(this.buttonName))
+                if (CrossPlatformInputManager.GetButtonDown(this.buttonName))
 #endif
                     return true;
             }
@@ -439,19 +439,19 @@ namespace Invector.vCharacterController
             {
                 if (isKey)
                 {
-                    if (ControlFreak2.CF2Input.GetKeyDown(key))
+                    if (Input.GetKeyDown(key))
                         return true;
                 }
                 else
                 {
-                    if (ControlFreak2.CF2Input.GetButtonDown(this.buttonName))
+                    if (Input.GetButtonDown(this.buttonName))
                         return true;
                 }
             }
             // joystick
             else if (inputDevice == InputDevice.Joystick)
             {
-                if (ControlFreak2.CF2Input.GetButtonDown(this.buttonName))
+                if (Input.GetButtonDown(this.buttonName))
                     return true;
             }
             return false;
@@ -470,7 +470,7 @@ namespace Invector.vCharacterController
             if (inputDevice == InputDevice.Mobile)
             {
 #if MOBILE_INPUT
-                if (ControlFreak2.CF2Input.GetButtonUp(this.buttonName))
+                if (CrossPlatformInputManager.GetButtonUp(this.buttonName))
 #endif
                     return true;
             }
@@ -479,19 +479,19 @@ namespace Invector.vCharacterController
             {
                 if (isKey)
                 {
-                    if (ControlFreak2.CF2Input.GetKeyUp(key))
+                    if (Input.GetKeyUp(key))
                         return true;
                 }
                 else
                 {
-                    if (ControlFreak2.CF2Input.GetButtonUp(this.buttonName))
+                    if (Input.GetButtonUp(this.buttonName))
                         return true;
                 }
             }
             // joystick
             else if (inputDevice == InputDevice.Joystick)
             {
-                if (ControlFreak2.CF2Input.GetButtonUp(this.buttonName))
+                if (Input.GetButtonUp(this.buttonName))
                     return true;
             }
             return false;
@@ -509,18 +509,18 @@ namespace Invector.vCharacterController
             if (inputDevice == InputDevice.Mobile)
             {
 #if MOBILE_INPUT
-                return ControlFreak2.CF2Input.GetAxis(this.buttonName);
+                return CrossPlatformInputManager.GetAxis(this.buttonName);
 #endif
             }
             // keyboard/mouse
             else if (inputDevice == InputDevice.MouseKeyboard)
             {
-                return ControlFreak2.CF2Input.GetAxis(this.buttonName);
+                return Input.GetAxis(this.buttonName);
             }
             // joystick
             else if (inputDevice == InputDevice.Joystick)
             {
-                return ControlFreak2.CF2Input.GetAxis(this.buttonName);
+                return Input.GetAxis(this.buttonName);
             }
             return 0;
         }
@@ -537,18 +537,18 @@ namespace Invector.vCharacterController
             if (inputDevice == InputDevice.Mobile)
             {
 #if MOBILE_INPUT
-                return ControlFreak2.CF2Input.GetAxisRaw(this.buttonName);
+                return CrossPlatformInputManager.GetAxisRaw(this.buttonName);
 #endif
             }
             // keyboard/mouse
             else if (inputDevice == InputDevice.MouseKeyboard)
             {
-                return ControlFreak2.CF2Input.GetAxisRaw(this.buttonName);
+                return Input.GetAxisRaw(this.buttonName);
             }
             // joystick
             else if (inputDevice == InputDevice.Joystick)
             {
-                return ControlFreak2.CF2Input.GetAxisRaw(this.buttonName);
+                return Input.GetAxisRaw(this.buttonName);
             }
             return 0;
         }
@@ -781,7 +781,7 @@ namespace Invector.vCharacterController
             try
             {
                 if (isKey) return true;
-                ControlFreak2.CF2Input.GetButton(buttonName);
+                Input.GetButton(buttonName);
                 return true;
             }
             catch (System.Exception exc)

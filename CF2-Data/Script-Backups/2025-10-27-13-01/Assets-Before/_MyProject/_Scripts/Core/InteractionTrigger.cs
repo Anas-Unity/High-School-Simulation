@@ -152,7 +152,7 @@ public class InteractionTrigger : MonoBehaviour
         if (!triggerActive || !playerInRange || dialogueTrigger.IsDialogueOpen || !canInteract)
             return;
 
-        if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             dialogueTrigger.Interact();
             promptUI?.SetActive(false);

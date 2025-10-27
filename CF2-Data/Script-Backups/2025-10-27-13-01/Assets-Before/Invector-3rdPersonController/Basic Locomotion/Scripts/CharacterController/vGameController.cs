@@ -66,7 +66,7 @@ namespace Invector
         /// <param name="value"></param>
         public virtual void ShowCursor(bool value)
         {
-            ControlFreak2.CFCursor.visible = value;
+            Cursor.visible = value;
         }
 
         /// <summary>
@@ -77,11 +77,11 @@ namespace Invector
         {
             if (value)
             {
-                ControlFreak2.CFCursor.lockState = CursorLockMode.Locked;
+                Cursor.lockState = CursorLockMode.Locked;
             }
             else
             {
-                ControlFreak2.CFCursor.lockState = CursorLockMode.None;
+                Cursor.lockState = CursorLockMode.None;
             }
         }
 
