@@ -30,6 +30,8 @@ TagManager:
   - CoverPoint
   - Interactable
   - AIAction
+  - Ladder
+  - LadderLandingPad
   layers:
   - Default
   - TransparentFX
@@ -50,9 +52,9 @@ TagManager:
   - BlockAIRayCast
   - Pushable
   - CoverPoint
-  - 
-  - 
-  - 
+  - Ground
+  - Intrectable
+  - NPC
   - 
   - 
   - 

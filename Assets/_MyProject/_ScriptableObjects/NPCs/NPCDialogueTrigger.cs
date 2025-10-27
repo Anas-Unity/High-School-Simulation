@@ -10,15 +10,17 @@ public class NPCDialogueTrigger : MonoBehaviour
     [Header("Dialogue Data")]
     public DialogueData dialogueData;
 
-    [Header("Time Progression")]
-    public TimeOfDay timeAfterDialogue = TimeOfDay.Morning;
-
     [HideInInspector] public bool IsDialogueOpen { get; private set; }
 
     private InteractionTrigger interactionTrigger;
     private vThirdPersonController controller;
     private vThirdPersonInput controllerInput;
     private Rigidbody playerRB;
+
+    // 🔹 Optional: assign this to control what navigation target index to set after this dialogue
+    [Header("Navigation Settings")]
+    public bool enableNavigationAfterDialogue = false;
+    public int navigationTargetIndex = -1; // e.g. 0 = School, 1 = Market
 
     private void Start()
     {
@@ -53,7 +55,6 @@ public class NPCDialogueTrigger : MonoBehaviour
 
         LockPlayer(true);
 
-        // disable prompt while talking
         interactionTrigger?.DisablePrompt();
 
         DialogueManager.Instance.onDialogueEnd += CloseDialogue;
@@ -68,12 +69,26 @@ public class NPCDialogueTrigger : MonoBehaviour
 
         LockPlayer(false);
 
-        // Apply time progression from NPC prefab
-        TimeManager.Instance.SetTime(timeAfterDialogue);
-
         DialogueManager.Instance.onDialogueEnd -= CloseDialogue;
-
         interactionTrigger?.EnablePrompt();
+
+        // 🔹 New Section: Trigger navigation logic after dialogue
+        if (enableNavigationAfterDialogue && navigationTargetIndex >= 0)
+        {
+            if (NavigationManager.Instance != null)
+            {
+                // Show button and set destination
+                NavigationManager.Instance.ShowNavigationButton(true);
+                NavigationManager.Instance.SetDestination(navigationTargetIndex);
+
+                // Optionally, automatically activate path
+                NavigationManager.Instance.ToggleNavigation();
+            }
+            else
+            {
+                Debug.LogWarning("NavigationManager instance not found in scene!");
+            }
+        }
     }
 
     private void LockPlayer(bool state)

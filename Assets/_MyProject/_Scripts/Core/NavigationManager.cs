@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -14,13 +14,14 @@ public class NavigationManager : MonoBehaviour
     private NavMeshPath path;
 
     [Header("UI References")]
-    public Button navigationButton;
-    public GameObject navigationListPanel;
+    public Button navigationButton; // Assign your button here
+    public GameObject navigationListPanel; // Optional (for future destinations)
 
     [Header("Destinations")]
-    public List<Transform> navigationTargets; // Assign School, Market, House etc in Inspector
+    public List<Transform> navigationTargets; // Assign School, Market, House etc.
 
-    private bool navigationActive;
+    private bool navigationActive = false;
+    private int currentDestinationIndex = -1;
 
     private void Awake()
     {
@@ -28,64 +29,94 @@ public class NavigationManager : MonoBehaviour
         else Destroy(gameObject);
 
         path = new NavMeshPath();
-        lineRenderer = navMeshPathDrawer.GetComponent<LineRenderer>();
+
+        if (navMeshPathDrawer != null)
+            lineRenderer = navMeshPathDrawer.GetComponent<LineRenderer>();
+
         if (lineRenderer != null)
             lineRenderer.enabled = false;
 
-        navigationListPanel.SetActive(false);
+        if (navigationListPanel != null)
+            navigationListPanel.SetActive(false);
     }
 
     private void Start()
     {
-        navigationButton.onClick.AddListener(OnNavigationButtonPressed);
+        if (navigationButton != null)
+        {
+            navigationButton.onClick.RemoveAllListeners();
+            navigationButton.onClick.AddListener(ToggleNavigation);
+        }
+
         UpdateButtonVisual();
     }
 
-    private float lastClickTime;
-    private float doubleClickDelay = 0.3f;
-
-    private void OnNavigationButtonPressed()
+    private void Update()
     {
-        float timeSinceLastClick = Time.time - lastClickTime;
-        lastClickTime = Time.time;
-
-        if (timeSinceLastClick <= doubleClickDelay)
+        // Keep updating path dynamically as player moves
+        if (navigationActive && currentDestinationIndex >= 0)
         {
-            // Double-click -> show/hide list
-            navigationListPanel.SetActive(!navigationListPanel.activeSelf);
+            DrawPath(navigationTargets[currentDestinationIndex].position);
         }
-        else
-        {
-            // Single click -> toggle navigation
-            navigationActive = !navigationActive;
+    }
+
+    // 🔹 Called by button or NPC to toggle navigation line
+    public void ToggleNavigation()
+    {
+        navigationActive = !navigationActive;
+        Debug.Log("Navigation Button Clicked!");
+
+
+        if (lineRenderer != null)
             lineRenderer.enabled = navigationActive;
-            UpdateButtonVisual();
+
+        if (!navigationActive)
+        {
+            lineRenderer.positionCount = 0; // clear line when turned off
         }
+
+        UpdateButtonVisual();
     }
 
-    private void UpdateButtonVisual()
-    {
-        Color color = navigationButton.image.color;
-        color.a = navigationActive ? 1f : 0.4f; // 40% transparency when inactive
-        navigationButton.image.color = color;
-    }
-
+    // 🔹 Used by NPC to assign a target
     public void SetDestination(int index)
     {
-        if (index < 0 || index >= navigationTargets.Count) return;
-        Transform target = navigationTargets[index];
-        DrawPath(target.position);
-        navigationListPanel.SetActive(false);
+        if (index < 0 || index >= navigationTargets.Count)
+        {
+            Debug.LogWarning("Invalid navigation target index!");
+            return;
+        }
+
+        currentDestinationIndex = index;
+        if (navigationActive)
+            DrawPath(navigationTargets[index].position);
     }
 
     private void DrawPath(Vector3 destination)
     {
-        if (!navigationActive) return;
+        if (player == null || lineRenderer == null)
+            return;
 
         if (NavMesh.CalculatePath(player.transform.position, destination, NavMesh.AllAreas, path))
         {
             lineRenderer.positionCount = path.corners.Length;
             lineRenderer.SetPositions(path.corners);
         }
+    }
+
+    // 🔹 Shows or hides the navigation button (used by NPCDialogueTrigger)
+    public void ShowNavigationButton(bool state)
+    {
+        if (navigationButton != null)
+            navigationButton.gameObject.SetActive(state);
+    }
+
+    private void UpdateButtonVisual()
+    {
+        if (navigationButton == null) return;
+
+        Color c = navigationButton.image.color;
+        c.a = navigationActive ? 1f : 0.4f; // full alpha = active, faded = inactive
+        navigationButton.image.color = c;
     }
 }
