@@ -30,10 +30,6 @@ TagManager:
   - CoverPoint
   - Interactable
   - AIAction
-  - Shopkeeper
-  - NPC
-  - Ladder
-  - LadderLandingPad
   layers:
   - Default
   - TransparentFX
@@ -55,10 +51,10 @@ TagManager:
   - Pushable
   - CoverPoint
   - 
-  - Interactable
-  - NPC
-  - Shop
-  - Ground
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
