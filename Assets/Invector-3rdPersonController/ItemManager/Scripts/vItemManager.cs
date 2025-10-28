@@ -801,7 +801,7 @@ namespace Invector.vItemManager
 
         #region Add/Equip/AutoEquip Item       
         /// <summary>
-        /// Add a new Item Instance to the Inventory
+        /// Add a new Item gameManager to the Inventory
         /// </summary>
         /// <param name="itemReference">Reference of the Item to be instantiate</param>
         /// <param name="ignoreItemAnimation">Play the Enable/Disable animation of your item, you can assign an animation to your item in the ItemListData</param>

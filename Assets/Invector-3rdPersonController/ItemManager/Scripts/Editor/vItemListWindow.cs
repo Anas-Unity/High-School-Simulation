@@ -62,7 +62,7 @@ namespace Invector.vItemManager
         public static void CreateWindow(vItemListData itemList, System.Action<int> OnSelectItem)
         {
             vItemListWindow window = (vItemListWindow)EditorWindow.CreateInstance<vItemListWindow>();
-            //  Instance = window;
+            //  gameManager = window;
             window.itemList = itemList;
             LoadSkin(window);
             window.OnSelectItem = OnSelectItem;

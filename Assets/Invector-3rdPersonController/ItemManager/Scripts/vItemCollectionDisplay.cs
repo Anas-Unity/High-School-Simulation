@@ -7,7 +7,7 @@ namespace Invector.vItemManager
     {
         private static vItemCollectionDisplay instance;
         /// <summary>
-        /// Instance of the <seealso cref="vItemCollectionDisplay"/>
+        /// gameManager of the <seealso cref="vItemCollectionDisplay"/>
         /// </summary>
         /// 
         public static vItemCollectionDisplay Instance

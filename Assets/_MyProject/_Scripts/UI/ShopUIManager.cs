@@ -42,9 +42,9 @@ public class ShopUIManager : MonoBehaviour
 
     public void BuyItem(ShopItem item)
     {
-        if (GameManager.Instance.coins >= item.price)
+        if (GameManager.gameManager.coins >= item.price)
         {
-            GameManager.Instance.SpendCoins(item.price);
+            GameManager.gameManager.SpendCoins(item.price);
             Debug.Log($"Bought {item.itemName}");
         }
         else

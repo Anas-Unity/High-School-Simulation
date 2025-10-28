@@ -3,18 +3,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager gameManager;
+    public List<string> questNames = new();
     public int coins = 500;
     public List<BondData> bonds;
 
     void Awake()
     {
-        if (Instance == null)
+        if (gameManager != null)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(gameObject);
         }
-        else Destroy(gameObject);
+        gameManager = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public void AddCoins(int amount) => coins += amount;

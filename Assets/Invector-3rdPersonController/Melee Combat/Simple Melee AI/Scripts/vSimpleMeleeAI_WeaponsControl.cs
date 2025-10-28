@@ -318,7 +318,7 @@ namespace Invector.vCharacterController.AI
         }
 
         /// <summary>
-        /// Add new Instance of Item to itemList
+        /// Add new gameManager of Item to itemList
         /// </summary>
         /// <param name="item"></param>
         public void AddItem(int itemID, int amount)
