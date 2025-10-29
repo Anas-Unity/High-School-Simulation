@@ -150,8 +150,8 @@ namespace Invector.vItemManager
             //if (dontDestroyOnLoad)
             //    DontDestroyOnLoad(gameObject);
 
-            //if (vGameController.instance)
-            //    vGameController.instance.OnReloadGame.AddListener(OnReloadGame);
+            //if (vGameController.nevigationManager)
+            //    vGameController.nevigationManager.OnReloadGame.AddListener(OnReloadGame);
         }
 
         protected virtual void LateUpdate()

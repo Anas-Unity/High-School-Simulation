@@ -432,7 +432,7 @@ namespace UnityEngine.AI
             if (isInPreviewScene || isPersistentObject)
                 return false;
 
-            // An instance can share asset reference only with its prefab parent
+            // An nevigationManager can share asset reference only with its prefab parent
             var prefab = UnityEditor.PrefabUtility.GetCorrespondingObjectFromSource(this) as NavMeshSurface;
             if (prefab != null && prefab.navMeshData == navMeshData)
                 return false;

@@ -1,89 +1,4 @@
-﻿/*using UnityEngine;
-using Invector.vCharacterController;
-
-[RequireComponent(typeof(Collider))]
-public class InteractionTrigger : MonoBehaviour
-{
-    [Header("References")]
-    public GameObject promptUI;
-    public NPCDialogueTrigger dialogueTrigger;
-
-    [Header("Settings")]
-    public float activationDelay = 1f;
-
-    private bool playerInRange = false;
-    private bool triggerActive = false;
-    private bool canShowPrompt = true;
-
-    private vThirdPersonController controller;
-    private vThirdPersonInput controllerInput;
-
-    private void Start()
-    {
-        if (promptUI != null)
-            promptUI.SetActive(false);
-
-        var playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
-        {
-            controller = playerObj.GetComponent<vThirdPersonController>();
-            controllerInput = playerObj.GetComponent<vThirdPersonInput>();
-        }
-
-        // Small delay to avoid instant trigger detection at game start
-        Invoke(nameof(ActivateTrigger), activationDelay);
-    }
-
-    private void ActivateTrigger() => triggerActive = true;
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!triggerActive || !other.CompareTag("Player")) return;
-
-        playerInRange = true;
-        if (canShowPrompt && !dialogueTrigger.IsDialogueOpen)
-            promptUI?.SetActive(true);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (!other.CompareTag("Player")) return;
-
-        playerInRange = false;
-        promptUI?.SetActive(false);
-        canShowPrompt = true; // reset when leaving
-    }
-
-    private void Update()
-    {
-        if (!triggerActive || !playerInRange || dialogueTrigger.IsDialogueOpen)
-            return;
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            promptUI?.SetActive(false);
-            canShowPrompt = false;
-            dialogueTrigger.Interact();
-        }
-    }
-
-    // Called externally by NPCDialogueTrigger when dialogue closes
-    public void EnablePrompt()
-    {
-        canShowPrompt = true;
-        if (playerInRange && !dialogueTrigger.IsDialogueOpen)
-            promptUI?.SetActive(true);
-    }
-
-    public void DisablePrompt()
-    {
-        canShowPrompt = false;
-        promptUI?.SetActive(false);
-    }
-}
-*/
-
-using UnityEngine;
+﻿using UnityEngine;
 using Invector.vCharacterController;
 using System.Collections;
 
@@ -91,7 +6,7 @@ using System.Collections;
 public class InteractionTrigger : MonoBehaviour
 {
     [Header("References")]
-    public GameObject promptUI;
+    public GameObject ActionHintTrigger;
     public NPCDialogueTrigger dialogueTrigger;
 
     [Header("Settings")]
@@ -108,8 +23,8 @@ public class InteractionTrigger : MonoBehaviour
 
     private void Start()
     {
-        if (promptUI != null)
-            promptUI.SetActive(false);
+        if (ActionHintTrigger != null)
+            ActionHintTrigger.SetActive(false);
 
         var playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
@@ -131,7 +46,7 @@ public class InteractionTrigger : MonoBehaviour
 
         // Show prompt only if player can currently interact and dialogue isn’t open
         if (canInteract && !dialogueTrigger.IsDialogueOpen)
-            promptUI?.SetActive(true);
+            ActionHintTrigger?.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
@@ -139,7 +54,7 @@ public class InteractionTrigger : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         playerInRange = false;
-        promptUI?.SetActive(false);
+        ActionHintTrigger?.SetActive(false);
 
         // reset cooldown when leaving the trigger zone
         canInteract = true;
@@ -155,7 +70,7 @@ public class InteractionTrigger : MonoBehaviour
         if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.E))
         {
             dialogueTrigger.Interact();
-            promptUI?.SetActive(false);
+            ActionHintTrigger?.SetActive(false);
 
             // lock interaction temporarily
             StartCoroutine(LocalCooldown());
@@ -180,7 +95,7 @@ public class InteractionTrigger : MonoBehaviour
             canInteract = true;
             isCoolingDown = false;
             if (!dialogueTrigger.IsDialogueOpen)
-                promptUI?.SetActive(true);
+                ActionHintTrigger?.SetActive(true);
         }
     }
 
@@ -188,11 +103,11 @@ public class InteractionTrigger : MonoBehaviour
     public void EnablePrompt()
     {
         if (playerInRange && canInteract && !dialogueTrigger.IsDialogueOpen)
-            promptUI?.SetActive(true);
+            ActionHintTrigger?.SetActive(true);
     }
 
     public void DisablePrompt()
     {
-        promptUI?.SetActive(false);
+        ActionHintTrigger?.SetActive(false);
     }
 }

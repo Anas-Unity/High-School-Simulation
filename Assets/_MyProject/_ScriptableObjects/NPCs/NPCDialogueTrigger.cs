@@ -20,15 +20,17 @@ public class NPCDialogueTrigger : MonoBehaviour
     private vThirdPersonInput controllerInput;
     private Rigidbody playerRB;
 
-    // 🔹 Optional: assign this to control what navigation target index to set after this dialogue
     [Header("Navigation Settings")]
     public bool enableNavigationAfterDialogue = false;
-    public int navigationTargetIndex = -1; // e.g. 0 = School, 1 = Market
+    [Tooltip("Index in NavigationManager's target list (e.g. 0 = School, 1 = Market, etc.)")]
+    public int navigationTargetIndex = -1;
 
     private void Start()
     {
-        if (promptUI != null) promptUI.SetActive(false);
-        if (dialoguePanel != null) dialoguePanel.SetActive(false);
+        if (promptUI != null)
+            promptUI.SetActive(false);
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(false);
 
         interactionTrigger = GetComponent<InteractionTrigger>();
 
@@ -46,6 +48,7 @@ public class NPCDialogueTrigger : MonoBehaviour
         if (IsDialogueOpen || dialogueData == null)
             return;
 
+        // Start Dialogue
         DialogueManager.Instance.StartDialogue(dialogueData);
 
         if (dialoguePanel != null)
@@ -81,6 +84,24 @@ public class NPCDialogueTrigger : MonoBehaviour
 
         if (questToGive != null)
             GameManager.gameManager.AddQuest(questToGive);
+
+        // --- NAVIGATION TRIGGER LOGIC ---
+        if (enableNavigationAfterDialogue && navigationTargetIndex >= 0)
+        {
+            if (NavigationManager.nevigationManager != null)
+            {
+                NavigationManager.nevigationManager.SetDestination(navigationTargetIndex);
+
+                // Automatically enable navigation after dialogue ends
+                NavigationManager.nevigationManager.EnableNavigation(true);
+
+                Debug.Log($"🧭 Navigation activated towards target index {navigationTargetIndex}");
+            }
+            else
+            {
+                Debug.LogWarning("⚠️ NavigationManager not found in scene.");
+            }
+        }
     }
 
     private void LockPlayer(bool state)

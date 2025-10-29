@@ -327,7 +327,7 @@ namespace Invector.vItemManager
 
         public virtual void OnPointerEnter(PointerEventData eventData)
         {
-            //if(vInput.instance.inputDevice == InputDevice.MouseKeyboard)
+            //if(vInput.nevigationManager.inputDevice == InputDevice.MouseKeyboard)
             {
                 EventSystem.current.SetSelectedGameObject(this.gameObject);
                 if (onSelectSlotCallBack != null)
@@ -337,7 +337,7 @@ namespace Invector.vItemManager
 
         public virtual void OnPointerExit(PointerEventData eventData)
         {
-            //if (vInput.instance.inputDevice == InputDevice.MouseKeyboard)
+            //if (vInput.nevigationManager.inputDevice == InputDevice.MouseKeyboard)
             {
                 if (onDeselectSlotCallBack != null)
                     onDeselectSlotCallBack(this);

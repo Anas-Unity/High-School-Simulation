@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questTitle: Talk to Rabbit
   questDescription: Go to the Rabbit in House.
-  questGiverName: Quest
+  questGiverName: Game Quest
   isCompleted: 0

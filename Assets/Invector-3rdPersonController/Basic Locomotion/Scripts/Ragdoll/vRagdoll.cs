@@ -251,7 +251,7 @@ namespace Invector.vCharacterController
             {
                 Component[] components = characterHips.GetComponentsInChildren(typeof(Transform));
                 bodyParts.Add(new BodyPart(characterHips));
-                // for each of the transforms, create a BodyPart instance and store the transform 
+                // for each of the transforms, create a BodyPart nevigationManager and store the transform 
 
                 for (int i = 0; i < components.Length; i++)
                 {
