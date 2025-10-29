@@ -10,6 +10,9 @@ public class NPCDialogueTrigger : MonoBehaviour
     [Header("Dialogue Data")]
     public DialogueData dialogueData;
 
+    [Header("Quest Logic")]
+    public QuestData questToGive;
+    public QuestData questToComplete;
     [HideInInspector] public bool IsDialogueOpen { get; private set; }
 
     private InteractionTrigger interactionTrigger;
@@ -72,23 +75,12 @@ public class NPCDialogueTrigger : MonoBehaviour
         DialogueManager.Instance.onDialogueEnd -= CloseDialogue;
         interactionTrigger?.EnablePrompt();
 
-        // 🔹 New Section: Trigger navigation logic after dialogue
-        if (enableNavigationAfterDialogue && navigationTargetIndex >= 0)
-        {
-            if (NavigationManager.Instance != null)
-            {
-                // Show button and set destination
-                NavigationManager.Instance.ShowNavigationButton(true);
-                NavigationManager.Instance.SetDestination(navigationTargetIndex);
+        // --- QUEST LOGIC ---
+        if (questToComplete != null)
+            GameManager.gameManager.CompleteQuest(questToComplete);
 
-                // Optionally, automatically activate path
-                NavigationManager.Instance.EnableNavigation(true);
-            }
-            else
-            {
-                Debug.LogWarning("NavigationManager instance not found in scene!");
-            }
-        }
+        if (questToGive != null)
+            GameManager.gameManager.AddQuest(questToGive);
     }
 
     private void LockPlayer(bool state)
