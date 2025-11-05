@@ -1,0 +1,10 @@
+Converting script [1 / 1]	[\_MyProject\_Scripts\Timeline\TimelineManager.cs]
+	Fragments : 1
+		[ 0] : Line:  234	InputMethod   GetButtonDown       	(inputActionName)
+
+
+1 scripts modified!
+Overwriting actual scripts...
+	[0 / 1] from  [E:/Unity Course Work/UnityProjects/High School Simulation/CF2-Data/Script-Backups/2025-10-31-10-17\Assets-After/\_MyProject\_Scripts\Timeline\TimelineManager.cs] to [E:/Unity Course Work/UnityProjects/High School Simulation/Assets/\_MyProject\_Scripts\Timeline\TimelineManager.cs]
+
+Overwriting COMPLETED!

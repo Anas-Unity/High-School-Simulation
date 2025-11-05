@@ -423,7 +423,7 @@ namespace Invector.vCharacterController
         public virtual float colliderHeight { get; set; }                     // storage capsule collider extra information                       
         public virtual float jumpMultiplier { get; set; }                     // internally used to set the jumpMultiplier
         public virtual float timeToResetJumpMultiplier { get; set; }          // internally used to reset the jump multiplier
-        public virtual float heightReached { get; set; }                      // max height that character reached in air;       
+        public virtual float heightReached { get; set; }                      // max height that character reached in air;
         public virtual bool lockMovement { get; set; }                        // lock the movement of the controller (not the animation)
         public virtual bool lockRotation { get; set; }                        // lock the rotation of the controller (not the animation)
         public virtual bool lockSetMoveSpeed { get; set; }                    // locks the method to update the moveset based on the locomotion type, so you can modify externally

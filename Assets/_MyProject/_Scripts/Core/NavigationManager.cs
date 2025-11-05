@@ -75,4 +75,8 @@ public class NavigationManager : MonoBehaviour
     {
         EnableNavigation(!navigationActive);
     }
+    public void HideNavigation()
+    {
+        pathDrawer.Stop();
+    }
 }

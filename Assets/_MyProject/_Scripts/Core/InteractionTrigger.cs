@@ -20,6 +20,7 @@ public class InteractionTrigger : MonoBehaviour
 
     private vThirdPersonController controller;
     private vThirdPersonInput controllerInput;
+    public int navigationTargetIndex = -1; //updated code to set targets of nevmash destination
 
     private void Start()
     {
@@ -45,35 +46,65 @@ public class InteractionTrigger : MonoBehaviour
         playerInRange = true;
 
         // Show prompt only if player can currently interact and dialogue isn’t open
-        if (canInteract && !dialogueTrigger.IsDialogueOpen)
-            ActionHintTrigger?.SetActive(true);
+
+        if (ActionHintTrigger != null && dialogueTrigger != null)
+        {
+            if (canInteract && !dialogueTrigger.IsDialogueOpen)
+                ActionHintTrigger?.SetActive(true);
+        }
+        else
+        {
+            if ( navigationTargetIndex >= 0)
+            {
+                if (NavigationManager.nevigationManager != null)
+                {
+                    NavigationManager.nevigationManager.SetDestination(navigationTargetIndex);
+
+                    // Automatically enable navigation after dialogue ends
+                    NavigationManager.nevigationManager.EnableNavigation(true);
+
+                    Debug.Log($"🧭 Navigation activated towards target index {navigationTargetIndex}");
+                }
+                else
+                {
+                    Debug.LogWarning("⚠️ NavigationManager not found in scene.");
+                }
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.CompareTag("Player")) return;
 
-        playerInRange = false;
-        ActionHintTrigger?.SetActive(false);
+        if (ActionHintTrigger != null && dialogueTrigger != null) //updated code to set targets of nevmash destination
+        {
+            if (!other.CompareTag("Player")) return;
 
-        // reset cooldown when leaving the trigger zone
-        canInteract = true;
-        isCoolingDown = false;
-        StopAllCoroutines();
+            playerInRange = false;
+            ActionHintTrigger?.SetActive(false);
+
+            // reset cooldown when leaving the trigger zone
+            canInteract = true;
+            isCoolingDown = false;
+            StopAllCoroutines();
+        }
     }
 
     private void Update()
     {
-        if (!triggerActive || !playerInRange || dialogueTrigger.IsDialogueOpen || !canInteract)
-            return;
-
-        if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.E))
+        if (ActionHintTrigger != null && dialogueTrigger != null) //updated code to set targets of nevmash destination
         {
-            dialogueTrigger.Interact();
-            ActionHintTrigger?.SetActive(false);
+            if (!triggerActive || !playerInRange || dialogueTrigger.IsDialogueOpen || !canInteract)
+                return;
 
-            // lock interaction temporarily
-            StartCoroutine(LocalCooldown());
+            if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.E))
+            {
+                dialogueTrigger.Interact();
+                ActionHintTrigger?.SetActive(false);
+
+                // lock interaction temporarily
+                StartCoroutine(LocalCooldown());
+            }
         }
     }
 
