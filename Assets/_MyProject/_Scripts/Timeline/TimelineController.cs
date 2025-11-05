@@ -100,6 +100,8 @@ public class TimelineController : MonoBehaviour
         {
             Debug.Log($"[{gameObject.name}] PlayerDidEnterTrigger: 'Require Input' is false. Playing timeline automatically.");
             PlayTimeline();
+            NavigationManager.nevigationManager.HideNavigation();
+            //playerController.enabled = false;
         }
         else
         {
@@ -119,12 +121,13 @@ public class TimelineController : MonoBehaviour
     {
         Debug.Log($"[{gameObject.name}] PlayTimeline: ----- STARTING CUTSCENE -----");
         HideHintPanel();
+                
         // --- 1. SETUP THE SCENE FOR THE CUTSCENE ---
 
         // Disable player movement using Invector's built-in function
         if (playerController != null)
         {
-            playerController.SetLockAllInput(true);
+            playerController.SetLockBasicInput(true);
             Debug.Log($"[{gameObject.name}] PlayTimeline: Called SetLockAllInput(true) on '{playerController.GetType().Name}'. Player input is now locked.");
         }
 
@@ -182,7 +185,7 @@ public class TimelineController : MonoBehaviour
         // Re-enable player movement using Invector's built-in function
         if (playerController != null)
         {
-            playerController.SetLockAllInput(false);
+            playerController.SetLockBasicInput(false);
             Debug.Log($"[{gameObject.name}] OnTimelineFinished: Called SetLockAllInput(false) on '{playerController.GetType().Name}'. Player input is now unlocked.");
         }
 

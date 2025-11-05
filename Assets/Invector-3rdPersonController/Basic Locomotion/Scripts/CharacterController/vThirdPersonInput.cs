@@ -270,11 +270,11 @@ namespace Invector.vCharacterController
             lockInput = value;
             if (value)
             {
-                //cc.input = Vector2.zero;
-                //cc.isSprinting = false;
-                //cc.animator.SetFloat("InputHorizontal", 0, 0.25f, Time.deltaTime);
-                //cc.animator.SetFloat("InputVertical", 0, 0.25f, Time.deltaTime);
-                //cc.animator.SetFloat("InputMagnitude", 0, 0.25f, Time.deltaTime);
+                cc.input = Vector2.zero;
+                cc.isSprinting = false;
+                cc.animator.SetFloat("InputHorizontal", 0, 0.25f, Time.deltaTime);
+                cc.animator.SetFloat("InputVertical", 0, 0.25f, Time.deltaTime);
+                cc.animator.SetFloat("InputMagnitude", 0, 0.25f, Time.deltaTime);
             }
         }
 
