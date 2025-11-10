@@ -59,13 +59,8 @@ public class TimelineManager : MonoBehaviour
 
     private void Start()
     {
-        // This check is fine, assuming you have a SaveManager.
-        //// If not, you can trigger the timeline manually for testing.
-        //if (SaveManager.Instance != null && !SaveManager.Instance.HasTimelinePlayed("StarterGuide"))
-        //{
             Debug.Log("▶️ Playing StarterGuide for first-time player...");
             PlayTimelineByKey("StarterGuide");
-        //}
     }
 
     public void BuildLookup()
@@ -112,17 +107,6 @@ public class TimelineManager : MonoBehaviour
         NamedTimeline currentTimelineSettings = GetNamedTimeline(timeline);
         // Remember this timeline's fader setting for later (when it ends/is skipped)
         _currentTimelineUsesFader = (currentTimelineSettings != null) ? currentTimelineSettings.useFader : true;
-       
-
-        //if (SaveManager.Instance != null && !string.IsNullOrEmpty(currentKey))
-        //{
-        //    if (SaveManager.Instance.HasTimelinePlayed(currentKey))
-        //    {
-        //        Debug.Log($"⏩ Skipping already played timeline: {currentKey}");
-        //        isPlaying = false;
-        //        yield break;
-        //    }
-        //}
 
 
         // Now, we check the flag before fading.
@@ -198,17 +182,8 @@ public class TimelineManager : MonoBehaviour
 
         if (subtitleUI != null)
             subtitleUI.HideImmediate();
+        
         fader.HideRaycast();
-
-        //if (SaveManager.Instance != null && director.playableAsset != null)
-        //{
-        //    string key = GetTimelineKey(director.playableAsset);
-        //    if (!string.IsNullOrEmpty(key))
-        //    {
-        //        SaveManager.Instance.MarkTimelineAsPlayed(key);
-        //        Debug.Log($"💾 Timeline progress saved: {key}");
-        //    }
-        //}
 
         StartCoroutine(EndSequenceFade());
     }

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6589a04fa07c254284e04d00c8132c7, type: 3}
   m_Name: Q_Rabbit_GoToSchool
   m_EditorClassIdentifier: 
-  questTitle: Rabbit
-  questDescription: Go to School.
+  questTitle: First Day of School
+  questDescription: "Good Morning! \nA new chapter begins today.\nGet ready! Don't
+    be late!"
   questGiverName: Rabbit
   isCompleted: 0

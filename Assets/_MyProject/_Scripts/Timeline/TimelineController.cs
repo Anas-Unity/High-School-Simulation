@@ -39,6 +39,7 @@ public class TimelineController : MonoBehaviour
 
     [Tooltip("(Optional) GameObject to DEACTIVATE when the timeline starts (e.g., the player model).")]
     public GameObject objectToDeactivate;
+    public GameObject deactivateTrigger;
 
     [Tooltip("(Optional) Drag your main in-game UI canvas or panel here. It will be hidden during the cutscene.")]
     public GameObject inGameUI;
@@ -83,8 +84,6 @@ public class TimelineController : MonoBehaviour
             Debug.Log("Enterd update function waiting for 'action' button.");
             if (CF2Input.GetButtonDown(actionButtonName))
             {
-                Debug.Log($"[{gameObject.name}] Update: Navigation Path Stoped.");
-                NavigationManager.nevigationManager.HideNavigation();
                 Debug.Log($"[{gameObject.name}] Update: 'Action' button pressed by player.");
                 PlayTimeline();
             }
@@ -100,8 +99,12 @@ public class TimelineController : MonoBehaviour
         {
             Debug.Log($"[{gameObject.name}] PlayerDidEnterTrigger: 'Require Input' is false. Playing timeline automatically.");
             PlayTimeline();
-            NavigationManager.nevigationManager.HideNavigation();
-            //playerController.enabled = false;
+
+            //Debug.Log($"[{gameObject.name}] PlayerDidEnterTrigger: Navigation Path Stoped.");
+            //NavigationManager.nevigationManager.HideNavigation();
+
+            // Deactivating the timeline trigger GO.
+            deactivateTrigger.SetActive(false);
         }
         else
         {

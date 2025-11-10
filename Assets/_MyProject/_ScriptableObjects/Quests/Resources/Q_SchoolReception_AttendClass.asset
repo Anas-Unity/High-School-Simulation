@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Q_SchoolReception_AttendClass
   m_EditorClassIdentifier: 
   questTitle: Visit Class
-  questDescription: 'Good to have you here.
+  questDescription: 'Welcome! First day, I presume? I have your schedule right here.
 
-    Now Visit your Class Room.'
+    You''re
+    in Class 1-B, Please try not to get lost!'
   questGiverName: Anna
   isCompleted: 0
