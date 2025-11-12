@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21ca3b0e8b823704fa0bf4bef2702d02, type: 3}
-  m_Name: NPC_Principal_School
+  m_Name: Q02_SchoolBus_Arrival
   m_EditorClassIdentifier: 
-  characterName: Principal Mizuho
+  characterName: Bus Driver
   dialogueLines:
-  - Sorry kid i'm busy.
+  - Hurry! Get in the Bus Kid.
   useTwoButtons: 0
   primaryButtonText: Continue
   secondaryButtonText: Cancel

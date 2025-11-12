@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     [Header("Completed Quests")]
     public List<QuestData> completedQuests = new List<QuestData>();
 
+    [Header("Quest Settings")]
+    [Tooltip("The very first quest to be automatically assigned when the game starts.")]
+    public QuestData startingQuest;
+
     // 🔹 EVENTS
     public event Action<QuestData> OnQuestAdded;
     public event Action<QuestData> OnQuestRemoved;
@@ -33,13 +37,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Save quests when the player quits the game.
+    private void OnApplicationQuit()
+    {
+        if (QuestSaveManager.Instance != null)
+        {
+            QuestSaveManager.Instance.SaveCompletedQuests(completedQuests);
+        }
+    }   
+
     private void Start()
     {
-        // Optional: Auto-load a starter quest if it exists
-        QuestData rabbitQuest = Resources.Load<QuestData>("Q_Rabbit_TalkToRabbit");
-        if (rabbitQuest != null && !activeQuests.Contains(rabbitQuest))
+        // Auto-assign the starter quest if it's set and not already completed.
+        if (startingQuest != null)
         {
-            AddQuest(rabbitQuest);
+            // We use the AddQuest logic which already checks if it's completed or active.
+            AddQuest(startingQuest);
         }
     }
 
@@ -49,23 +62,42 @@ public class GameManager : MonoBehaviour
 
     public void AddQuest(QuestData quest)
     {
-        if (quest == null)
+        if (quest == null) return;
+
+        // --- ADD THIS CHECK ---
+        // Do not add the quest if it's already completed or already active.
+        if (QuestSaveManager.Instance.IsQuestCompleted(quest.questID) || activeQuests.Contains(quest))
         {
-            Debug.LogWarning("[GameManager] Tried to add a null quest.");
+            Debug.LogWarning($"[GameManager] Quest '{quest.questTitle}' is already completed or active. Cannot add.");
             return;
         }
+        // --- END NEW CHECK ---
 
-        if (!activeQuests.Contains(quest))
-        {
-            activeQuests.Add(quest);
-            Debug.Log($"[GameManager] Added quest: {quest.questTitle}");
-            OnQuestAdded?.Invoke(quest);
-        }
-        else
-        {
-            Debug.LogWarning($"[GameManager] Quest '{quest.questTitle}' already active.");
-        }
+        activeQuests.Add(quest);
+        Debug.Log($"[GameManager] Added quest: {quest.questTitle}");
+        OnQuestAdded?.Invoke(quest);
     }
+
+
+    //public void AddQuest(QuestData quest)
+    //{
+    //    if (quest == null)
+    //    {
+    //        Debug.LogWarning("[GameManager] Tried to add a null quest.");
+    //        return;
+    //    }
+
+    //    if (!activeQuests.Contains(quest))
+    //    {
+    //        activeQuests.Add(quest);
+    //        Debug.Log($"[GameManager] Added quest: {quest.questTitle}");
+    //        OnQuestAdded?.Invoke(quest);
+    //    }
+    //    else
+    //    {
+    //        Debug.LogWarning($"[GameManager] Quest '{quest.questTitle}' already active.");
+    //    }
+    //}
 
     public void RemoveQuest(QuestData quest)
     {
@@ -94,9 +126,21 @@ public class GameManager : MonoBehaviour
             {
                 completedQuests.Add(quest);
             }
+            // Tell the Save Manager to save the new completed quest list.
+            if (QuestSaveManager.Instance != null)
+            {
+                QuestSaveManager.Instance.SaveCompletedQuests(completedQuests);
+            }
 
             Debug.Log($"[GameManager] Completed quest: {quest.questTitle}");
             OnQuestCompleted?.Invoke(quest);
+
+            // Check if there is a follow-up quest and activate it.
+            if (quest.nextQuest != null)
+            {
+                AddQuest(quest.nextQuest);
+                Debug.Log($"[GameManager] Automatically activated next quest: {quest.nextQuest.questTitle}");
+            }
         }
         else
         {

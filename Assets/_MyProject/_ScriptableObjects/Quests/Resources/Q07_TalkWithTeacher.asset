@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6589a04fa07c254284e04d00c8132c7, type: 3}
-  m_Name: Q_SchoolReception_AttendClass
+  m_Name: Q07_TalkWithTeacher
   m_EditorClassIdentifier: 
-  questTitle: Visit Class
-  questDescription: 'Welcome! First day, I presume? I have your schedule right here.
-
-    You''re
-    in Class 1-B, Please try not to get lost!'
-  questGiverName: Anna
-  isCompleted: 0
+  questID: Q07_TalkWithTeacher
+  questTitle: Talk with Teacher
+  questDescription: Talk with teacher.
+  questGiverName: 
+  nextQuest: {fileID: 11400000, guid: 98ff691ea18e4fd4488e69afd64bdfe0, type: 2}

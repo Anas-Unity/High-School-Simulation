@@ -16,6 +16,12 @@ public class QuestGiver : MonoBehaviour
             Debug.LogWarning("[QuestGiver] No quest assigned!");
             return;
         }
+        // Check with the save manager before giving the quest.
+        if (QuestSaveManager.Instance.IsQuestCompleted(questToGive.questID))
+        {
+            Debug.Log($"[QuestGiver] Did not give quest '{questToGive.questTitle}' because it is already completed.");
+            return;
+        }
 
         // Assign who gave the quest (for QuestBook display)
         questToGive.questGiverName = npcName;

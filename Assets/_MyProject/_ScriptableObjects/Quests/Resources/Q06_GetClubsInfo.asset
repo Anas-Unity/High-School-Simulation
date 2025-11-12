@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6589a04fa07c254284e04d00c8132c7, type: 3}
-  m_Name: Q_Homeroom1_FemaleT
+  m_Name: Q06_GetClubsInfo
   m_EditorClassIdentifier: 
-  questTitle: 
-  questDescription: 
+  questID: Q06_GetClubsInfo
+  questTitle: School Clubs
+  questDescription: Talk with students looking for new club members.
   questGiverName: 
-  isCompleted: 0
+  nextQuest: {fileID: 11400000, guid: ad2a6efafe98162479b8ecf8c8ac7c99, type: 2}

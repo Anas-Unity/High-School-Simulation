@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21ca3b0e8b823704fa0bf4bef2702d02, type: 3}
-  m_Name: NPC_Welcome_Rabbit
+  m_Name: Q03_End_SchoolReception
   m_EditorClassIdentifier: 
-  characterName: Rabbit
+  characterName: Anna
   dialogueLines:
-  - "Good Morning! \nIt\u2019s Time to get ready for school."
+  - Enjoy Your School Life.
   useTwoButtons: 0
   primaryButtonText: Continue
   secondaryButtonText: Cancel

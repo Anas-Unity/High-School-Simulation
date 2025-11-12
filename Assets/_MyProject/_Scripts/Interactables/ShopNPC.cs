@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShopNPC : MonoBehaviour, IInteractable
+public class ShopNPC : MonoBehaviour//, Interactable
 {
     public ShopInventory shopInventory;
 

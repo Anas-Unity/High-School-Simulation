@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21ca3b0e8b823704fa0bf4bef2702d02, type: 3}
-  m_Name: NPC_Reception_School
+  m_Name: Q01_End_WelcomeRabbit
   m_EditorClassIdentifier: 
-  characterName: Anna
+  characterName: Rabbit
   dialogueLines:
-  - 'Hi! Welcome to School.
-
-    Enjoy your Time here.'
+  - Good Luck with your School Life.
   useTwoButtons: 0
   primaryButtonText: Continue
   secondaryButtonText: Cancel
