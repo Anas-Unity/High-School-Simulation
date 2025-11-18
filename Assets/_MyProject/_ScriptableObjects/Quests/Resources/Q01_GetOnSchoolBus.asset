@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: Q01_GetOnSchoolBus
   questTitle: First Day of School
-  questDescription: 'Get in the School Bus.
-
-'
+  questDescription: Get in the bus & go to school.
   questGiverName: Rabbit
   nextQuest: {fileID: 11400000, guid: 8ef58b577fcf9ac408cf6b789b9e976b, type: 2}

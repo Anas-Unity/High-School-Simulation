@@ -14,10 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Miss Kazumi
   dialogueLines:
-  - 'Good Morning Student! lets start the class.
-
-    Go and sit on the empty seat
-    at back.'
+  - "Good Morning Student! \nI'm your homeroom teacher Kazumi.\nWork hard Okay!"
   useTwoButtons: 0
-  primaryButtonText: Continue
+  primaryButtonText: 
   secondaryButtonText: Cancel

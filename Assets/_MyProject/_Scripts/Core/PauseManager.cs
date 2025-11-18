@@ -3,7 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
+    [Header("UI Panels")]
+    [Tooltip("The parent GameObject for your pause menu UI elements.")]
     [SerializeField] private GameObject pauseMenuPanel;
+
+    [Tooltip("The parent GameObject for your on-screen player controls (joystick, buttons, etc.).")]
+    [SerializeField] private GameObject playerControlsUI;
+
+    [Header("Scene Configuration")]
     [SerializeField] private string mainMenuSceneName = "MainMenu";
 
     private bool isPaused = false;
@@ -16,39 +23,54 @@ public class PauseManager : MonoBehaviour
 
     void Update()
     {
-        // Listen for the "Escape" key to toggle the pause menu.
+        // Keep the Escape key functionality as a backup/for PC builds.
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            TogglePause();
+        }
+    }
+
+    /// <summary>
+    /// A public method that can be called by either a UI button or the Escape key.
+    /// </summary>
+    public void TogglePause()
+    {
+        if (isPaused)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
         }
     }
 
     public void Resume()
     {
         pauseMenuPanel.SetActive(false);
-        Time.timeScale = 1f; // <-- CRITICAL: Unfreezes the game.
+        if (playerControlsUI != null) playerControlsUI.SetActive(true); // Show controls
+
+        Time.timeScale = 1f; // Unfreeze the game
         isPaused = false;
-        // You may also want to unlock the cursor and re-enable player input here.
     }
 
-    void Pause()
+    // Made public so the on-screen pause button can call it directly.
+    public void Pause()
     {
         pauseMenuPanel.SetActive(true);
-        Time.timeScale = 0f; // <-- CRITICAL: Freezes the game.
+        if (playerControlsUI != null) playerControlsUI.SetActive(false); // Hide controls
+
+        Time.timeScale = 0f; // Freeze the game
         isPaused = true;
-        // You may also want to lock the cursor and disable player input here.
     }
 
+    /// <summary>
+    /// This is your "Quit to Menu" function.
+    /// </summary>
     public void LoadMenu()
     {
-        // CRITICAL: You MUST unfreeze time before leaving the scene.
+        // CRITICAL: You MUST unfreeze time before leaving the scene,
+        // otherwise your main menu might start frozen.
         Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenuSceneName);
     }

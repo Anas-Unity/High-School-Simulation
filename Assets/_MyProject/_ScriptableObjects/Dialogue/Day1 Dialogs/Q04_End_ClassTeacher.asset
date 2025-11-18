@@ -16,5 +16,5 @@ MonoBehaviour:
   dialogueLines:
   - Make Sure to Work Hard.
   useTwoButtons: 0
-  primaryButtonText: Continue
+  primaryButtonText: 
   secondaryButtonText: Cancel

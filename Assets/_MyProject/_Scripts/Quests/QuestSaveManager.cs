@@ -76,4 +76,9 @@ public class QuestSaveManager : MonoBehaviour
         if (string.IsNullOrEmpty(questID)) return false;
         return completedQuestIDs.Contains(questID);
     }
+    public void ClearDataInMemory()
+    {
+        completedQuestIDs.Clear();
+        Debug.Log("[QuestSaveManager] In-memory quest completion data has been cleared.");
+    }
 }

@@ -40,7 +40,7 @@ public class MultiQuestNPC : MonoBehaviour, Interactable
     private QuestAssignment currentAssignment;
 
     // --- Player Controller References (for locking movement) ---
-    // Make sure your player has the "Player" tag.
+    // Make sure that player has the "Player" tag.
     private Invector.vCharacterController.vThirdPersonController playerController;
     private Invector.vCharacterController.vThirdPersonInput playerInput;
 

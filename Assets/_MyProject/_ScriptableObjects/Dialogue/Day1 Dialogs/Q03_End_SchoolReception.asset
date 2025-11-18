@@ -16,5 +16,5 @@ MonoBehaviour:
   dialogueLines:
   - Enjoy Your School Life.
   useTwoButtons: 0
-  primaryButtonText: Continue
+  primaryButtonText: 
   secondaryButtonText: Cancel

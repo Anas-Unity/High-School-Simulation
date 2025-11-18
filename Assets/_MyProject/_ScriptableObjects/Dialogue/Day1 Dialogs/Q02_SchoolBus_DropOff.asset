@@ -16,5 +16,5 @@ MonoBehaviour:
   dialogueLines:
   - Good Luck with your Classes Kid.
   useTwoButtons: 0
-  primaryButtonText: Continue
+  primaryButtonText: 
   secondaryButtonText: Cancel

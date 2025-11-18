@@ -19,5 +19,5 @@ MonoBehaviour:
     You''re
     in Class 1-B, Please try not to get lost!'
   useTwoButtons: 0
-  primaryButtonText: Continue
+  primaryButtonText: 
   secondaryButtonText: Cancel

@@ -16,5 +16,5 @@ MonoBehaviour:
   dialogueLines:
   - Hurry! Get in the Bus Kid.
   useTwoButtons: 0
-  primaryButtonText: Continue
+  primaryButtonText: 
   secondaryButtonText: Cancel

@@ -1,26 +1,38 @@
+// In MenuManager.cs
+
 using UnityEngine;
-using UnityEngine.SceneManagement; // <-- You MUST add this line to manage scenes.
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [Header("Game Scene Referance")]
-    [Tooltip("Enter the name of your game scene correctly")]
-    // Assign the name of your main game scene in the Inspector.
     [SerializeField] private string gameSceneName = "GameScene";
 
     public void StartGame()
     {
-        // Load the main game scene.
         SceneManager.LoadScene(gameSceneName);
     }
 
     public void ResetProgress()
     {
-        // WARNING: This deletes ALL saved data.
-        // This is where your QuestSaveManager stores its data.
+        // --- THIS IS THE MODIFIED, CORRECT RESET LOGIC ---
+
+        // 1. Erase the saved data from the disk.
         PlayerPrefs.DeleteAll();
-        Debug.Log("Player progress has been reset.");
-        // You might want to add a confirmation pop-up UI for this later.
+        Debug.Log("PlayerPrefs (saved data on disk) have been deleted.");
+
+        // 2. Command the live QuestSaveManager to purge its in-memory data.
+        if (QuestSaveManager.Instance != null)
+        {
+            QuestSaveManager.Instance.ClearDataInMemory();
+        }
+
+        // 3. Command the live GameManager to purge its in-memory quest lists.
+        if (GameManager.gameManager != null)
+        {
+            GameManager.gameManager.ResetQuestState();
+        }
+
+        Debug.Log("Full game progress reset has been completed.");
     }
 
     public void QuitGame()
@@ -28,9 +40,8 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Quitting application...");
         Application.Quit();
 
-        // This line is for testing in the Unity Editor.
-#if UNITY_EDITOR
+        #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-#endif
+        #endif
     }
 }

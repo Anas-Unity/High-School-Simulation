@@ -44,7 +44,7 @@ public class NavigationManager : MonoBehaviour
 
         pathDrawer.destination = target;
 
-        if (navigationActive)
+        if (navigationActive == true)
             pathDrawer.Draw();
 
         Debug.Log($"🧭 Destination set to: {target.name}");

@@ -79,26 +79,6 @@ public class GameManager : MonoBehaviour
     }
 
 
-    //public void AddQuest(QuestData quest)
-    //{
-    //    if (quest == null)
-    //    {
-    //        Debug.LogWarning("[GameManager] Tried to add a null quest.");
-    //        return;
-    //    }
-
-    //    if (!activeQuests.Contains(quest))
-    //    {
-    //        activeQuests.Add(quest);
-    //        Debug.Log($"[GameManager] Added quest: {quest.questTitle}");
-    //        OnQuestAdded?.Invoke(quest);
-    //    }
-    //    else
-    //    {
-    //        Debug.LogWarning($"[GameManager] Quest '{quest.questTitle}' already active.");
-    //    }
-    //}
-
     public void RemoveQuest(QuestData quest)
     {
         if (quest == null) return;
@@ -145,6 +125,21 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.LogWarning($"[GameManager] Tried to complete a quest that isn’t active: {quest.questTitle}");
+        }
+    }
+
+    /// Resets the live quest state by clearing all active and completed quest lists.
+    /// This is essential for a full game reset.
+    public void ResetQuestState()
+    {
+        activeQuests.Clear();
+        completedQuests.Clear();
+        Debug.Log("[GameManager] Live quest state (active and completed lists) has been reset.");
+
+        // Optional but recommended: Re-add the starting quest after a reset.
+        if (startingQuest != null)
+        {
+            AddQuest(startingQuest);
         }
     }
 

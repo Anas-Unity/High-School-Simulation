@@ -16,5 +16,5 @@ MonoBehaviour:
   dialogueLines:
   - "Good Morning! \nIt\u2019s Time to get ready for school."
   useTwoButtons: 0
-  primaryButtonText: Continue
+  primaryButtonText: 
   secondaryButtonText: Cancel

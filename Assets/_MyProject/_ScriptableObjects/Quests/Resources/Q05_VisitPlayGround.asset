@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: Q05_VisitPlayGround
   questTitle: PlayGround
-  questDescription: Talk with Student in your Class.
+  questDescription: Lets go to playground.
   questGiverName: Classmate
   nextQuest: {fileID: 11400000, guid: 3f70edc94da85864cabd7bddaa5575ca, type: 2}
